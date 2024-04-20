@@ -1,12 +1,12 @@
 import siteMetadata from '@/data/siteMetadata'
-import headerNavLinks from '@/data/headerNavLinks'
+import { headerNavLinks } from '@/data/headerNavLinks'
 import Logo from '@/data/logo.svg'
-import Link from './Link'
-import MobileNav from './MobileNav'
-import ThemeSwitch from './ThemeSwitch'
-import SearchButton from './SearchButton'
+import { Link } from './Link'
+import { MobileNav } from './MobileNav'
+import { ThemeSwitch } from './ThemeSwitch'
+import { SearchButton } from './SearchButton'
 
-const Header = () => {
+export const Header = () => {
   return (
     <header className="flex items-center justify-between py-10">
       <div>
@@ -44,5 +44,3 @@ const Header = () => {
     </header>
   )
 }
-
-export default Header

@@ -1,7 +1,7 @@
 import siteMetadata from '@/data/siteMetadata'
-import SocialIcon from '@/components/social-icons'
+import { SocialIcon } from '@/components/social-icons'
 
-export default function Footer() {
+export const Footer = () => {
   return (
     <footer>
       <div className="mb-8 mt-16 flex flex-col items-center">

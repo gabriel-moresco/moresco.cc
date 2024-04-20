@@ -18,6 +18,7 @@ const Sun = () => (
     />
   </svg>
 )
+
 const Moon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -28,15 +29,16 @@ const Moon = () => (
     <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
   </svg>
 )
+
 const Monitor = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 20 20"
     fill="none"
     stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
     className="h-6 w-6 text-gray-900 dark:text-gray-100"
   >
     <rect x="3" y="3" width="14" height="10" rx="2" ry="2"></rect>
@@ -45,7 +47,7 @@ const Monitor = () => (
   </svg>
 )
 
-const ThemeSwitch = () => {
+export const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme, resolvedTheme } = useTheme()
 
@@ -108,5 +110,3 @@ const ThemeSwitch = () => {
     </div>
   )
 }
-
-export default ThemeSwitch

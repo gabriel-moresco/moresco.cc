@@ -3,25 +3,27 @@
 import siteMetadata from '@/data/siteMetadata'
 import { useEffect, useState } from 'react'
 
-const ScrollTopAndComment = () => {
+export const ScrollTopAndComment = () => {
   const [show, setShow] = useState(false)
 
   useEffect(() => {
     const handleWindowScroll = () => {
-      if (window.scrollY > 50) setShow(true)
-      else setShow(false)
+      setShow(window.scrollY > 50)
     }
 
     window.addEventListener('scroll', handleWindowScroll)
+
     return () => window.removeEventListener('scroll', handleWindowScroll)
   }, [])
 
   const handleScrollTop = () => {
     window.scrollTo({ top: 0 })
   }
+
   const handleScrollToComment = () => {
     document.getElementById('comment')?.scrollIntoView()
   }
+
   return (
     <div
       className={`fixed bottom-8 right-8 hidden flex-col gap-3 ${show ? 'md:flex' : 'md:hidden'}`}
@@ -57,5 +59,3 @@ const ScrollTopAndComment = () => {
     </div>
   )
 }
-
-export default ScrollTopAndComment

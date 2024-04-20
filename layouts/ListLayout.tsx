@@ -5,14 +5,15 @@ import { usePathname } from 'next/navigation'
 import { formatDate } from 'pliny/utils/formatDate'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import type { Blog } from 'contentlayer/generated'
-import Link from '@/components/Link'
-import Tag from '@/components/Tag'
+import { Link } from '@/components/Link'
+import { Tag } from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 
 interface PaginationProps {
   totalPages: number
   currentPage: number
 }
+
 interface ListLayoutProps {
   posts: CoreContent<Blog>[]
   title: string
@@ -60,12 +61,12 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
   )
 }
 
-export default function ListLayout({
+export const ListLayout = ({
   posts,
   title,
   initialDisplayPosts = [],
   pagination,
-}: ListLayoutProps) {
+}: ListLayoutProps) => {
   const [searchValue, setSearchValue] = useState('')
   const filteredBlogPosts = posts.filter((post) => {
     const searchContent = post.title + post.summary + post.tags?.join(' ')
