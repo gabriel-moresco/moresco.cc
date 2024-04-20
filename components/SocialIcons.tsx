@@ -8,7 +8,7 @@ import {
   Mastodon,
   Threads,
   Instagram,
-} from './icons'
+} from '@/data/icons'
 
 const components = {
   mail: Mail,

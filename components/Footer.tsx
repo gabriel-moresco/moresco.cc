@@ -1,5 +1,5 @@
 import siteMetadata from '@/data/siteMetadata'
-import { SocialIcon } from '@/components/social-icons'
+import { SocialIcon } from '@/components/SocialIcons'
 
 export const Footer = () => {
   return (
