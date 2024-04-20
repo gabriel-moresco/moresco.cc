@@ -2,8 +2,7 @@ import 'css/tailwind.css'
 import 'pliny/search/algolia.css'
 
 import { Metadata } from 'next'
-// eslint-disable-next-line camelcase
-import { Space_Grotesk } from 'next/font/google'
+import localFont from 'next/font/local'
 
 import { Analytics, AnalyticsConfig } from 'pliny/analytics'
 import { SearchProvider, SearchConfig } from 'pliny/search'
@@ -15,10 +14,81 @@ import { ThemeProvider } from '@/components/ThemeProvider'
 
 import siteMetadata from '@/data/siteMetadata'
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
+const biotif = localFont({
+  src: [
+    {
+      path: '../public/static/fonts/Biotif-BlackItalic.ttf',
+      weight: '900',
+      style: 'italic',
+    },
+    {
+      path: '../public/static/fonts/Biotif-Black.ttf',
+      weight: '900',
+      style: 'normal',
+    },
+    {
+      path: '../public/static/fonts/Biotif-ExtraBoldItalic.ttf',
+      weight: '800',
+      style: 'italic',
+    },
+    {
+      path: '../public/static/fonts/Biotif-ExtraBold.ttf',
+      weight: '800',
+      style: 'normal',
+    },
+    {
+      path: '../public/static/fonts/Biotif-BoldItalic.ttf',
+      weight: '700',
+      style: 'italic',
+    },
+    {
+      path: '../public/static/fonts/Biotif-Bold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../public/static/fonts/Biotif-SemiBoldItalic.ttf',
+      weight: '600',
+      style: 'italic',
+    },
+    {
+      path: '../public/static/fonts/Biotif-SemiBold.ttf',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../public/static/fonts/Biotif-BookItalic.ttf',
+      weight: '500',
+      style: 'italic',
+    },
+    {
+      path: '../public/static/fonts/Biotif-Book.ttf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../public/static/fonts/Biotif-RegularItalic.ttf',
+      weight: '400',
+      style: 'italic',
+    },
+    {
+      path: '../public/static/fonts/Biotif-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../public/static/fonts/Biotif-LightItalic.ttf',
+      weight: '300',
+      style: 'italic',
+    },
+    {
+      path: '../public/static/fonts/Biotif-Light.ttf',
+      weight: '300',
+      style: 'normal',
+    },
+  ],
   display: 'swap',
-  variable: '--font-space-grotesk',
+  variable: '--font-biotif',
 })
 
 export const metadata: Metadata = {
@@ -65,7 +135,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang={siteMetadata.language}
-      className={`${spaceGrotesk.variable} scroll-smooth`}
+      className={`${biotif.variable} scroll-smooth`}
       suppressHydrationWarning
     >
       <link rel='apple-touch-icon' sizes='76x76' href='/static/favicons/apple-touch-icon.png' />
