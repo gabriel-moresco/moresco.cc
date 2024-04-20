@@ -10,14 +10,13 @@ const siteMetadata = {
   siteRepo: 'https://github.com/gabriel-moresco/moresco.cc',
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/twitter-card.png',
-  email: 'gabriel@moresco.cc', // TODO: change
+  email: 'gabriel@moresco.cc',
   github: 'https://github.com/gabriel-moresco/moresco.cc',
   twitter: 'https://twitter.com/moreesco',
   linkedin: 'https://linkedin.comin/gabriel-moresco',
   instagram: 'https://www.instagram.com/_moresco',
   locale: 'en-US',
   analytics: {
-    // TODO: configure analytics
     // If you want to use an analytics provider you have to add it to the
     // content security policy in the `next.config.js` file.
     // supports Plausible, Simple Analytics, Umami, Posthog or Google Analytics.
@@ -40,7 +39,6 @@ const siteMetadata = {
     // },
   },
   comments: {
-    // TODO: configure comments
     // If you want to use an analytics provider you have to add it to the
     // content security policy in the `next.config.js` file.
     // Select a provider and use the environment variables associated to it
