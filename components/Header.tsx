@@ -1,5 +1,5 @@
 import siteMetadata from '@/data/siteMetadata'
-import { headerNavLinks } from '@/data/headerNavLinks'
+import { headerLinks } from '@/data/header-links'
 import Logo from '@/data/logo.svg'
 import { Link } from './Link'
 import { MobileNav } from './MobileNav'
@@ -26,7 +26,7 @@ export const Header = () => {
         </Link>
       </div>
       <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
-        {headerNavLinks
+        {headerLinks
           .filter((link) => link.href !== '/')
           .map((link) => (
             <Link

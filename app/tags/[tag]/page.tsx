@@ -4,7 +4,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { ListLayoutWithTags } from '@/layouts/ListLayoutWithTags'
 import { allBlogs } from 'contentlayer/generated'
 import tagData from 'app/tag-data.json'
-import { genPageMetadata } from 'app/seo'
+import { genPageMetadata } from '@/utils/seo'
 import { Metadata } from 'next'
 
 export async function generateMetadata({ params }: { params: { tag: string } }): Promise<Metadata> {

@@ -5,7 +5,7 @@ interface Project {
   imgSrc?: string
 }
 
-export const projectsData: Project[] = [
+export const projects: Project[] = [
   {
     title: 'A Search Engine',
     description: `What if you could look up any information in the world? Webpages, images, videos
