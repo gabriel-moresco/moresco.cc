@@ -6,7 +6,7 @@ import { Image } from './Image'
 import { Link } from './Link'
 import { TableWrapper } from './TableWrapper'
 
-export const MDXComponents: MDXComponentsType = {
+export const MdxComponents: MDXComponentsType = {
   Image,
   TOCInline,
   a: Link,

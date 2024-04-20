@@ -1,23 +1,21 @@
 import {
   Mail,
-  Github,
+  GitHub,
   Facebook,
-  Youtube,
-  Linkedin,
+  YouTube,
+  LinkedIn,
   Twitter,
-  Mastodon,
   Threads,
   Instagram,
 } from '@/data/icons'
 
 const components = {
   mail: Mail,
-  github: Github,
+  github: GitHub,
   facebook: Facebook,
-  youtube: Youtube,
-  linkedin: Linkedin,
+  youtube: YouTube,
+  linkedin: LinkedIn,
   twitter: Twitter,
-  mastodon: Mastodon,
   threads: Threads,
   instagram: Instagram,
 }
