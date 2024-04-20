@@ -3,9 +3,9 @@ import BlogNewsletterForm from 'pliny/ui/BlogNewsletterForm'
 import Pre from 'pliny/ui/Pre'
 import TOCInline from 'pliny/ui/TOCInline'
 
-import { Image } from '@/components/Image'
-import { Link } from '@/components/Link'
-import { TableWrapper } from '@/components/TableWrapper'
+import { Image } from '@/components/image'
+import { Link } from '@/components/link'
+import { TableWrapper } from '@/components/table-wrapper'
 
 export const MdxComponents: MDXComponentsType = {
   Image,

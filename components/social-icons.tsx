@@ -7,7 +7,7 @@ import {
   Twitter,
   Threads,
   Instagram,
-} from '@/data/icons'
+} from '@/components/icons'
 
 const components = {
   mail: Mail,

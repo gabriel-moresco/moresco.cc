@@ -1,7 +1,7 @@
-import { Link } from '@/components/Link'
-import { MobileNav } from '@/components/MobileNav'
-import { SearchButton } from '@/components/SearchButton'
-import { ThemeSwitch } from '@/components/ThemeSwitch'
+import { Link } from '@/components/link'
+import { MobileNav } from '@/components/mobile-nav'
+import { SearchButton } from '@/components/search-button'
+import { ThemeSwitch } from '@/components/theme-switch'
 
 import { headerLinks } from '@/data/header-links'
 import Logo from '@/data/logo.svg'

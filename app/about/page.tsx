@@ -1,6 +1,6 @@
 import { Authors, allAuthors } from 'contentlayer/generated'
 
-import { AuthorLayout } from '@/layouts/AuthorLayout'
+import { AuthorLayout } from '@/layouts/author-layout'
 
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
 

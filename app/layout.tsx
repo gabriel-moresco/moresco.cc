@@ -7,10 +7,10 @@ import localFont from 'next/font/local'
 import { Analytics, AnalyticsConfig } from 'pliny/analytics'
 import { SearchProvider, SearchConfig } from 'pliny/search'
 
-import { Footer } from '@/components/Footer'
-import { Header } from '@/components/Header'
-import { SectionContainer } from '@/components/SectionContainer'
-import { ThemeProvider } from '@/components/ThemeProvider'
+import { Footer } from '@/components/footer'
+import { Header } from '@/components/header'
+import { SectionContainer } from '@/components/section-container'
+import { ThemeProvider } from '@/components/theme-provider'
 
 import siteMetadata from '@/data/siteMetadata'
 

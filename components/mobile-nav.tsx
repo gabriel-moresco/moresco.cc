@@ -2,10 +2,10 @@
 
 import { useState } from 'react'
 
-import { Link } from '@/components/Link'
+import { Burger, Close } from '@/components/icons'
+import { Link } from '@/components/link'
 
 import { headerLinks } from '@/data/header-links'
-import { Burger, Close } from '@/data/icons'
 
 export const MobileNav = () => {
   const [navShow, setNavShow] = useState(false)

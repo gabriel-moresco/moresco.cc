@@ -6,10 +6,10 @@ import { usePathname } from 'next/navigation'
 
 import type { Blog } from 'contentlayer/generated'
 
-import { Link } from '@/components/Link'
-import { Tag } from '@/components/Tag'
+import { Search } from '@/components/icons'
+import { Link } from '@/components/link'
+import { Tag } from '@/components/tag'
 
-import { Search } from '@/data/icons'
 import siteMetadata from '@/data/siteMetadata'
 
 import { CoreContent } from 'pliny/utils/contentlayer'

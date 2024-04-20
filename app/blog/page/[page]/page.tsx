@@ -1,6 +1,6 @@
 import { allBlogs } from 'contentlayer/generated'
 
-import { ListLayout } from '@/layouts/ListLayout'
+import { ListLayout } from '@/layouts/list-layout'
 
 import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
 

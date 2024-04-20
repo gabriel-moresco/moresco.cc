@@ -2,13 +2,13 @@ import { ReactNode } from 'react'
 
 import type { Blog, Authors } from 'contentlayer/generated'
 
-import { Comments } from '@/components/Comments'
-import { Image } from '@/components/Image'
-import { Link } from '@/components/Link'
-import { PageTitle } from '@/components/PageTitle'
-import { ScrollTopAndComment } from '@/components/ScrollTopAndComment'
-import { SectionContainer } from '@/components/SectionContainer'
-import { Tag } from '@/components/Tag'
+import { Comments } from '@/components/comments'
+import { Image } from '@/components/image'
+import { Link } from '@/components/link'
+import { PageTitle } from '@/components/page-title'
+import { ScrollTopAndComment } from '@/components/scroll-top-and-comment'
+import { SectionContainer } from '@/components/section-container'
+import { Tag } from '@/components/tag'
 
 import siteMetadata from '@/data/siteMetadata'
 

@@ -6,7 +6,7 @@ import { useTheme } from 'next-themes'
 
 import { Menu, RadioGroup, Transition } from '@headlessui/react'
 
-import { Monitor, Moon, Sun } from '@/data/icons'
+import { Monitor, Moon, Sun } from '@/components/icons'
 
 export const ThemeSwitch = () => {
   const [, setMounted] = useState(false)

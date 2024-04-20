@@ -2,11 +2,11 @@ import { ReactNode } from 'react'
 
 import type { Blog } from 'contentlayer/generated'
 
-import { Comments } from '@/components/Comments'
-import { Link } from '@/components/Link'
-import { PageTitle } from '@/components/PageTitle'
-import { ScrollTopAndComment } from '@/components/ScrollTopAndComment'
-import { SectionContainer } from '@/components/SectionContainer'
+import { Comments } from '@/components/comments'
+import { Link } from '@/components/link'
+import { PageTitle } from '@/components/page-title'
+import { ScrollTopAndComment } from '@/components/scroll-top-and-comment'
+import { SectionContainer } from '@/components/section-container'
 
 import siteMetadata from '@/data/siteMetadata'
 

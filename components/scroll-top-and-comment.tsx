@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from 'react'
 
-import { ArrowUp, Comment } from '@/data/icons'
+import { ArrowUp, Comment } from '@/components/icons'
+
 import siteMetadata from '@/data/siteMetadata'
 
 export const ScrollTopAndComment = () => {

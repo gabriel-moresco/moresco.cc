@@ -7,11 +7,11 @@ import { notFound } from 'next/navigation'
 import { allBlogs, allAuthors } from 'contentlayer/generated'
 import type { Authors, Blog } from 'contentlayer/generated'
 
-import { PostBanner } from '@/layouts/PostBanner'
-import { PostLayout } from '@/layouts/PostLayout'
-import { PostSimple } from '@/layouts/PostSimple'
+import { PostBanner } from '@/layouts/post-banner'
+import { PostLayout } from '@/layouts/post-layout'
+import { PostSimple } from '@/layouts/post-simple'
 
-import { MdxComponents } from '@/components/MdxComponents'
+import { MdxComponents } from '@/components/mdx-components'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
 
 import siteMetadata from '@/data/siteMetadata'
