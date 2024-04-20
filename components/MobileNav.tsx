@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Link } from './Link'
+import { Link } from '@/components/Link'
 import { headerLinks } from '@/data/header-links'
 
 export const MobileNav = () => {

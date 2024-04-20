@@ -1,10 +1,10 @@
 import siteMetadata from '@/data/siteMetadata'
 import { headerLinks } from '@/data/header-links'
 import Logo from '@/data/logo.svg'
-import { Link } from './Link'
-import { MobileNav } from './MobileNav'
-import { ThemeSwitch } from './ThemeSwitch'
-import { SearchButton } from './SearchButton'
+import { Link } from '@/components/Link'
+import { MobileNav } from '@/components/MobileNav'
+import { ThemeSwitch } from '@/components/ThemeSwitch'
+import { SearchButton } from '@/components/SearchButton'
 
 export const Header = () => {
   return (
