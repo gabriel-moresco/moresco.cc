@@ -1,6 +1,8 @@
-import { ListLayout } from '@/layouts/ListLayout'
-import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
 import { allBlogs } from 'contentlayer/generated'
+
+import { ListLayout } from '@/layouts/ListLayout'
+
+import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
 
 const POSTS_PER_PAGE = 5
 
@@ -17,7 +19,7 @@ export default function Page({ params }: { params: { page: string } }) {
 
   const initialDisplayPosts = posts.slice(
     POSTS_PER_PAGE * (pageNumber - 1),
-    POSTS_PER_PAGE * pageNumber
+    POSTS_PER_PAGE * pageNumber,
   )
 
   const pagination = {
@@ -30,7 +32,7 @@ export default function Page({ params }: { params: { page: string } }) {
       posts={posts}
       initialDisplayPosts={initialDisplayPosts}
       pagination={pagination}
-      title="All Posts"
+      title='All Posts'
     />
   )
 }

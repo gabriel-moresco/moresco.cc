@@ -1,7 +1,8 @@
 import { AlgoliaButton } from 'pliny/search/AlgoliaButton'
 import { KBarButton } from 'pliny/search/KBarButton'
-import siteMetadata from '@/data/siteMetadata'
+
 import { Search } from '@/data/icons'
+import siteMetadata from '@/data/siteMetadata'
 
 export const SearchButton = () => {
   if (
@@ -15,8 +16,8 @@ export const SearchButton = () => {
     siteMetadata.search.provider === 'algolia' ? AlgoliaButton : KBarButton
 
   return (
-    <SearchButtonWrapper aria-label="Search">
-      <Search className="h-6 w-6 text-gray-900 dark:text-gray-100" />
+    <SearchButtonWrapper aria-label='Search'>
+      <Search className='h-6 w-6 text-gray-900 dark:text-gray-100' />
     </SearchButtonWrapper>
   )
 }

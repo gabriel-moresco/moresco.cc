@@ -1,26 +1,28 @@
 import { defineDocumentType, ComputedFields, makeSource } from 'contentlayer2/source-files'
 import { writeFileSync } from 'fs'
-import readingTime from 'reading-time'
 import { slug } from 'github-slugger'
-import path from 'path'
 import { fromHtmlIsomorphic } from 'hast-util-from-html-isomorphic'
+import path from 'path'
 // Remark packages
-import remarkGfm from 'remark-gfm'
-import remarkMath from 'remark-math'
 import {
   remarkExtractFrontmatter,
   remarkCodeTitles,
   remarkImgToJsx,
   extractTocHeadings,
 } from 'pliny/mdx-plugins/index.js'
+import readingTime from 'reading-time'
 // Rehype packages
-import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import rehypeKatex from 'rehype-katex'
 import rehypeCitation from 'rehype-citation'
-import rehypePrismPlus from 'rehype-prism-plus'
+import rehypeKatex from 'rehype-katex'
 import rehypePresetMinify from 'rehype-preset-minify'
+import rehypePrismPlus from 'rehype-prism-plus'
+import rehypeSlug from 'rehype-slug'
+import remarkGfm from 'remark-gfm'
+import remarkMath from 'remark-math'
+
 import siteMetadata from './data/siteMetadata'
+
 import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer.js'
 
 const root = process.cwd()
@@ -36,24 +38,24 @@ const icon = fromHtmlIsomorphic(
   </svg>
   </span>
 `,
-  { fragment: true }
+  { fragment: true },
 )
 
 const computedFields: ComputedFields = {
-  readingTime: { type: 'json', resolve: (doc) => readingTime(doc.body.raw) },
+  readingTime: { type: 'json', resolve: doc => readingTime(doc.body.raw) },
   slug: {
     type: 'string',
-    resolve: (doc) => doc._raw.flattenedPath.replace(/^.+?(\/)/, ''),
+    resolve: doc => doc._raw.flattenedPath.replace(/^.+?(\/)/, ''),
   },
   path: {
     type: 'string',
-    resolve: (doc) => doc._raw.flattenedPath,
+    resolve: doc => doc._raw.flattenedPath,
   },
   filePath: {
     type: 'string',
-    resolve: (doc) => doc._raw.sourceFilePath,
+    resolve: doc => doc._raw.sourceFilePath,
   },
-  toc: { type: 'string', resolve: (doc) => extractTocHeadings(doc.body.raw) },
+  toc: { type: 'string', resolve: doc => extractTocHeadings(doc.body.raw) },
 }
 
 /**
@@ -61,9 +63,9 @@ const computedFields: ComputedFields = {
  */
 function createTagCount(allBlogs) {
   const tagCount: Record<string, number> = {}
-  allBlogs.forEach((file) => {
+  allBlogs.forEach(file => {
     if (file.tags && (!isProduction || file.draft !== true)) {
-      file.tags.forEach((tag) => {
+      file.tags.forEach(tag => {
         const formattedTag = slug(tag)
         if (formattedTag in tagCount) {
           tagCount[formattedTag] += 1
@@ -83,7 +85,7 @@ function createSearchIndex(allBlogs) {
   ) {
     writeFileSync(
       `public/${siteMetadata.search.kbarConfig.searchDocumentsPath}`,
-      JSON.stringify(allCoreContent(sortPosts(allBlogs)))
+      JSON.stringify(allCoreContent(sortPosts(allBlogs))),
     )
     console.log('Local search index generated...')
   }
@@ -110,7 +112,7 @@ export const Blog = defineDocumentType(() => ({
     ...computedFields,
     structuredData: {
       type: 'json',
-      resolve: (doc) => ({
+      resolve: doc => ({
         '@context': 'https://schema.org',
         '@type': 'BlogPosting',
         headline: doc.title,
@@ -172,7 +174,7 @@ export default makeSource({
       rehypePresetMinify,
     ],
   },
-  onSuccess: async (importData) => {
+  onSuccess: async importData => {
     const { allBlogs } = await importData()
     createTagCount(allBlogs)
     createSearchIndex(allBlogs)

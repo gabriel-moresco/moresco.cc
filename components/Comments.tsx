@@ -1,7 +1,9 @@
 'use client'
 
-import { Comments as CommentsComponent } from 'pliny/comments'
 import { useState } from 'react'
+
+import { Comments as CommentsComponent } from 'pliny/comments'
+
 import siteMetadata from '@/data/siteMetadata'
 
 export const Comments = ({ slug }: { slug: string }) => {
