@@ -14,6 +14,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { notFound } from 'next/navigation'
 
 const defaultLayout = 'PostLayout'
+
 const layouts = {
   PostSimple,
   PostLayout,
