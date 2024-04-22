@@ -3,9 +3,13 @@ import { MobileNav } from '@/components/mobile-nav'
 import { SearchButton } from '@/components/search-button'
 import { ThemeSwitch } from '@/components/theme-switch'
 
-import { headerLinks } from '@/data/header-links'
 import Logo from '@/data/logo.svg'
 import siteMetadata from '@/data/siteMetadata'
+
+export const links = [
+  { href: '/', title: 'Home' },
+  { href: '/about', title: 'About' },
+]
 
 export const Header = () => {
   return (
@@ -27,7 +31,7 @@ export const Header = () => {
         </Link>
       </div>
       <div className='flex items-center space-x-4 leading-5 sm:space-x-6'>
-        {headerLinks
+        {links
           .filter(link => link.href !== '/')
           .map(link => (
             <Link
@@ -40,7 +44,7 @@ export const Header = () => {
           ))}
         <SearchButton />
         <ThemeSwitch />
-        <MobileNav />
+        <MobileNav links={links} />
       </div>
     </header>
   )

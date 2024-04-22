@@ -5,9 +5,14 @@ import { useState } from 'react'
 import { Burger, Close } from '@/components/icons'
 import { Link } from '@/components/link'
 
-import { headerLinks } from '@/data/header-links'
+interface Props {
+  links: {
+    href: string
+    title: string
+  }[]
+}
 
-export const MobileNav = () => {
+export const MobileNav = ({ links }: Props) => {
   const [navShow, setNavShow] = useState(false)
 
   const onToggleNav = () => {
@@ -34,7 +39,7 @@ export const MobileNav = () => {
           </button>
         </div>
         <nav className='fixed mt-8 h-full'>
-          {headerLinks.map(link => (
+          {links.map(link => (
             <div key={link.title} className='px-12 py-4'>
               <Link
                 href={link.href}
