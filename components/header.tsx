@@ -1,9 +1,10 @@
+import Logo from 'public/static/logo.svg'
+
 import { Link } from '@/components/link'
 import { MobileNav } from '@/components/mobile-nav'
 import { SearchButton } from '@/components/search-button'
 import { ThemeSwitch } from '@/components/theme-switch'
 
-import Logo from '@/data/logo.svg'
 import siteMetadata from '@/data/siteMetadata'
 
 export const links = [
