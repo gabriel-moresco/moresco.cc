@@ -1,13 +1,31 @@
+import { Metadata } from 'next'
+
 import { Authors, allAuthors } from 'contentlayer/generated'
+import { coreContent } from 'pliny/utils/contentlayer'
 
 import { AuthorLayout } from '@/layouts/author-layout'
 
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
 
-import { genPageMetadata } from '@/utils/seo'
-import { coreContent } from 'pliny/utils/contentlayer'
+import siteMetadata from '@/data/siteMetadata'
 
-export const metadata = genPageMetadata({ title: 'About' })
+export const metadata: Metadata = {
+  title: 'About',
+  openGraph: {
+    title: `About | ${siteMetadata.title}`,
+    description: siteMetadata.description,
+    url: './',
+    siteName: siteMetadata.title,
+    images: siteMetadata.socialBanner,
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    title: `About | ${siteMetadata.title}`,
+    card: 'summary_large_image',
+    images: siteMetadata.socialBanner,
+  },
+}
 
 export default function Page() {
   const author = allAuthors.find(p => p.slug === 'default') as Authors

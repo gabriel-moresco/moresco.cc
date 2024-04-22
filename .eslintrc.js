@@ -35,7 +35,6 @@ module.exports = {
           '/layouts/',
           '/components/',
           '/data/',
-          '/utils/',
           '/css/',
         ],
         alphabetize: {
