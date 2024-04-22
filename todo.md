@@ -1,4 +1,4 @@
-TODO: change Blog property name to Article
+TODO: remove discuss on twitter
 TODO: change logo
 TODO: change og
 TODO: fill about and author page

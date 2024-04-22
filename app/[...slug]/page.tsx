@@ -4,8 +4,8 @@ import 'katex/dist/katex.css'
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
-import { allBlogs, allAuthors } from 'contentlayer/generated'
-import type { Authors, Blog } from 'contentlayer/generated'
+import { allPosts, allAuthors } from 'contentlayer/generated'
+import type { Author, Post } from 'contentlayer/generated'
 import { sortPosts, coreContent, allCoreContent } from 'pliny/utils/contentlayer'
 
 import { PostBanner } from '@/layouts/post-banner'
@@ -31,12 +31,12 @@ export async function generateMetadata({
   params: { slug: string[] }
 }): Promise<Metadata | undefined> {
   const slug = decodeURI(params.slug.join('/'))
-  const post = allBlogs.find(p => p.slug === slug)
+  const post = allPosts.find(p => p.slug === slug)
   const authorList = post?.authors || ['default']
 
   const authorDetails = authorList.map(author => {
     const authorResults = allAuthors.find(p => p.slug === author)
-    return coreContent(authorResults as Authors)
+    return coreContent(authorResults as Author)
   })
 
   if (!post) {
@@ -83,7 +83,7 @@ export async function generateMetadata({
 }
 
 export const generateStaticParams = async () => {
-  const paths = allBlogs.map(p => ({ slug: p.slug.split('/') }))
+  const paths = allPosts.map(p => ({ slug: p.slug.split('/') }))
 
   return paths
 }
@@ -92,7 +92,7 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
   const slug = decodeURI(params.slug.join('/'))
 
   // Filter out drafts in production
-  const sortedCoreContents = allCoreContent(sortPosts(allBlogs))
+  const sortedCoreContents = allCoreContent(sortPosts(allPosts))
 
   const postIndex = sortedCoreContents.findIndex(p => p.slug === slug)
   if (postIndex === -1) {
@@ -101,12 +101,12 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
 
   const prev = sortedCoreContents[postIndex + 1]
   const next = sortedCoreContents[postIndex - 1]
-  const post = allBlogs.find(p => p.slug === slug) as Blog
+  const post = allPosts.find(p => p.slug === slug) as Post
   const authorList = post?.authors || ['default']
 
   const authorDetails = authorList.map(author => {
     const authorResults = allAuthors.find(p => p.slug === author)
-    return coreContent(authorResults as Authors)
+    return coreContent(authorResults as Author)
   })
 
   const mainContent = coreContent(post)

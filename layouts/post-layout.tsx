@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-import type { Blog, Authors } from 'contentlayer/generated'
+import type { Post, Author } from 'contentlayer/generated'
 import { CoreContent } from 'pliny/utils/contentlayer'
 
 import { Comments } from '@/components/comments'
@@ -24,8 +24,8 @@ const postDateTemplate: Intl.DateTimeFormatOptions = {
 }
 
 interface LayoutProps {
-  content: CoreContent<Blog>
-  authorDetails: CoreContent<Authors>[]
+  content: CoreContent<Post>
+  authorDetails: CoreContent<Author>[]
   next?: { path: string; title: string }
   prev?: { path: string; title: string }
   children: ReactNode
@@ -33,7 +33,6 @@ interface LayoutProps {
 
 export const PostLayout = ({ content, authorDetails, next, prev, children }: LayoutProps) => {
   const { filePath, path, slug, date, title } = content
-  const basePath = path.split('/')[0]
 
   return (
     <SectionContainer>
@@ -142,11 +141,11 @@ export const PostLayout = ({ content, authorDetails, next, prev, children }: Lay
               </div>
               <div className='pt-4 xl:pt-8'>
                 <Link
-                  href={`/${basePath}`}
+                  href='/'
                   className='text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'
-                  aria-label='Back to the blog'
+                  aria-label='Back to home'
                 >
-                  &larr; Back to the blog
+                  &larr; Back to home
                 </Link>
               </div>
             </footer>

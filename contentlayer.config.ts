@@ -1,8 +1,8 @@
+import { Post as PostType } from 'contentlayer/generated'
 import { defineDocumentType, ComputedFields, makeSource } from 'contentlayer2/source-files'
 import { writeFileSync } from 'fs'
 import { fromHtmlIsomorphic } from 'hast-util-from-html-isomorphic'
 import path from 'path'
-// Remark packages
 import {
   remarkExtractFrontmatter,
   remarkCodeTitles,
@@ -11,7 +11,6 @@ import {
 } from 'pliny/mdx-plugins/index.js'
 import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer.js'
 import readingTime from 'reading-time'
-// Rehype packages
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeCitation from 'rehype-citation'
 import rehypeKatex from 'rehype-katex'
@@ -46,7 +45,7 @@ const computedFields: ComputedFields = {
   },
   path: {
     type: 'string',
-    resolve: doc => doc._raw.flattenedPath.replace(/blog\/?/, ''),
+    resolve: doc => doc._raw.flattenedPath.replace(/posts\/?/, ''),
   },
   filePath: {
     type: 'string',
@@ -55,22 +54,23 @@ const computedFields: ComputedFields = {
   toc: { type: 'string', resolve: doc => extractTocHeadings(doc.body.raw) },
 }
 
-function createSearchIndex(allBlogs) {
+const createSearchIndex = (posts: PostType[]) => {
   if (
     siteMetadata?.search?.provider === 'kbar' &&
     siteMetadata.search.kbarConfig.searchDocumentsPath
   ) {
     writeFileSync(
       `public/${siteMetadata.search.kbarConfig.searchDocumentsPath}`,
-      JSON.stringify(allCoreContent(sortPosts(allBlogs))),
+      JSON.stringify(allCoreContent(sortPosts(posts))),
     )
+
     console.log('Local search index generated...')
   }
 }
 
-export const Blog = defineDocumentType(() => ({
-  name: 'Blog',
-  filePathPattern: 'blog/**/*.mdx',
+export const Post = defineDocumentType(() => ({
+  name: 'Post',
+  filePathPattern: 'posts/**/*.mdx',
   contentType: 'mdx',
   fields: {
     title: { type: 'string', required: true },
@@ -102,8 +102,8 @@ export const Blog = defineDocumentType(() => ({
   },
 }))
 
-export const Authors = defineDocumentType(() => ({
-  name: 'Authors',
+export const Author = defineDocumentType(() => ({
+  name: 'Author',
   filePathPattern: 'authors/**/*.mdx',
   contentType: 'mdx',
   fields: {
@@ -122,7 +122,7 @@ export const Authors = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: 'data',
-  documentTypes: [Blog, Authors],
+  documentTypes: [Post, Author],
   mdx: {
     cwd: process.cwd(),
     remarkPlugins: [
@@ -151,7 +151,7 @@ export default makeSource({
     ],
   },
   onSuccess: async importData => {
-    const { allBlogs } = await importData()
-    createSearchIndex(allBlogs)
+    const { allPosts } = await importData()
+    createSearchIndex(allPosts)
   },
 })

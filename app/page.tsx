@@ -1,4 +1,4 @@
-import { allBlogs } from 'contentlayer/generated'
+import { allPosts } from 'contentlayer/generated'
 import { sortPosts, allCoreContent } from 'pliny/utils/contentlayer'
 import { formatDate } from 'pliny/utils/formatDate'
 
@@ -7,7 +7,7 @@ import { Link } from '@/components/link'
 import siteMetadata from '@/data/siteMetadata'
 
 export default async function Page() {
-  const sortedPosts = sortPosts(allBlogs)
+  const sortedPosts = sortPosts(allPosts)
   const posts = allCoreContent(sortedPosts)
 
   return (

@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 
-import { Authors, allAuthors } from 'contentlayer/generated'
+import { Author, allAuthors } from 'contentlayer/generated'
 import { coreContent } from 'pliny/utils/contentlayer'
 
 import { Image } from '@/components/image'
@@ -28,7 +28,8 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  const author = allAuthors.find(p => p.slug === 'default') as Authors
+  const author = allAuthors.find(p => p.slug === 'default') as Author
+
   const { name, avatar, occupation, company, email, twitter, linkedin, github } =
     coreContent(author)
 
