@@ -2202,19 +2202,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@headlessui/react@npm:1.7.19":
-  version: 1.7.19
-  resolution: "@headlessui/react@npm:1.7.19"
-  dependencies:
-    "@tanstack/react-virtual": ^3.0.0-beta.60
-    client-only: ^0.0.1
-  peerDependencies:
-    react: ^16 || ^17 || ^18
-    react-dom: ^16 || ^17 || ^18
-  checksum: 2a343a5fcf1f45e870cc94613231b89a8da78114001ffafa4751a0eceae7569ff9237aff1f2aedfa6f6e53ee3bb9ba5e5d19ebf1878fee3ff4f3c733fddc1087
-  languageName: node
-  linkType: hard
-
 "@humanwhocodes/config-array@npm:^0.11.14":
   version: 0.11.14
   resolution: "@humanwhocodes/config-array@npm:0.11.14"
@@ -3120,25 +3107,6 @@ __metadata:
   peerDependencies:
     tailwindcss: "*"
   checksum: b2037e73d83ad5bd8ca00b22314feb6c72706bf1ae5be087c41805923f06e90bc95c7410f071a36f1d72f9cff850a369e16321f12f7d6e85d78f9fedd8e480ac
-  languageName: node
-  linkType: hard
-
-"@tanstack/react-virtual@npm:^3.0.0-beta.60":
-  version: 3.3.0
-  resolution: "@tanstack/react-virtual@npm:3.3.0"
-  dependencies:
-    "@tanstack/virtual-core": 3.3.0
-  peerDependencies:
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0
-    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-  checksum: fe230208c3a7b251e4744fd32e3d58c098f7c5ad8727155d52863a800bc12fca54f00d18fce5b3ffed43b12e2139242fd1eb11e6fa55ec0908d081943ccae3e0
-  languageName: node
-  linkType: hard
-
-"@tanstack/virtual-core@npm:3.3.0":
-  version: 3.3.0
-  resolution: "@tanstack/virtual-core@npm:3.3.0"
-  checksum: 35c398b822b4a575197a324533d19e248fc0692f23fd6e492dd592960f921b3fda05ddf1578466d6114f4924f6eb304aa8f2b8f03f9d22fce2d307c85ca41d1c
   languageName: node
   linkType: hard
 
@@ -4256,7 +4224,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"client-only@npm:0.0.1, client-only@npm:^0.0.1":
+"client-only@npm:0.0.1":
   version: 0.0.1
   resolution: "client-only@npm:0.0.1"
   checksum: 0c16bf660dadb90610553c1d8946a7fdfb81d624adea073b8440b7d795d5b5b08beb3c950c6a2cf16279365a3265158a236876d92bce16423c485c322d7dfaf8
@@ -8542,7 +8510,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "moresco.cc@workspace:."
   dependencies:
-    "@headlessui/react": 1.7.19
     "@next/bundle-analyzer": 14.2.1
     "@svgr/webpack": ^8.0.1
     "@tailwindcss/forms": ^0.5.7
