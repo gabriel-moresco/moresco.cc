@@ -8,7 +8,6 @@ import type { Blog } from 'contentlayer/generated'
 
 import { Search } from '@/components/icons'
 import { Link } from '@/components/link'
-import { Tag } from '@/components/tag'
 
 import siteMetadata from '@/data/siteMetadata'
 
@@ -76,7 +75,7 @@ export const ListLayout = ({
   const [searchValue, setSearchValue] = useState('')
 
   const filteredBlogPosts = posts.filter(post => {
-    const searchContent = post.title + post.summary + post.tags?.join(' ')
+    const searchContent = post.title + post.summary
     return searchContent.toLowerCase().includes(searchValue.toLowerCase())
   })
 
@@ -108,7 +107,7 @@ export const ListLayout = ({
         <ul>
           {!filteredBlogPosts.length && 'No posts found.'}
           {displayPosts.map(post => {
-            const { path, date, title, summary, tags } = post
+            const { path, date, title, summary } = post
             return (
               <li key={path} className='py-4'>
                 <article className='space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0'>
@@ -119,16 +118,11 @@ export const ListLayout = ({
                     </dd>
                   </dl>
                   <div className='space-y-3 xl:col-span-3'>
-                    <div>
-                      <h3 className='text-2xl font-bold leading-8 tracking-tight'>
-                        <Link href={`/${path}`} className='text-gray-900 dark:text-gray-100'>
-                          {title}
-                        </Link>
-                      </h3>
-                      <div className='flex flex-wrap'>
-                        {tags?.map(tag => <Tag key={tag} text={tag} />)}
-                      </div>
-                    </div>
+                    <h3 className='text-2xl font-bold leading-8 tracking-tight'>
+                      <Link href={`/${path}`} className='text-gray-900 dark:text-gray-100'>
+                        {title}
+                      </Link>
+                    </h3>
                     <div className='prose max-w-none text-gray-500 dark:text-gray-400'>
                       {summary}
                     </div>

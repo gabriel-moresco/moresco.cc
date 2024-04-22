@@ -1,7 +1,6 @@
 import { allBlogs } from 'contentlayer/generated'
 
 import { Link } from '@/components/link'
-import { Tag } from '@/components/tag'
 
 import siteMetadata from '@/data/siteMetadata'
 
@@ -28,7 +27,7 @@ export default async function Page() {
         <ul className='divide-y divide-gray-200 dark:divide-gray-700'>
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map(post => {
-            const { slug, date, title, summary, tags } = post
+            const { slug, date, title, summary } = post
             return (
               <li key={slug} className='py-12'>
                 <article>
@@ -41,18 +40,11 @@ export default async function Page() {
                     </dl>
                     <div className='space-y-5 xl:col-span-3'>
                       <div className='space-y-6'>
-                        <div>
-                          <h2 className='text-2xl font-bold leading-8 tracking-tight'>
-                            <Link href={`/${slug}`} className='text-gray-900 dark:text-gray-100'>
-                              {title}
-                            </Link>
-                          </h2>
-                          <div className='flex flex-wrap'>
-                            {tags.map(tag => (
-                              <Tag key={tag} text={tag} />
-                            ))}
-                          </div>
-                        </div>
+                        <h2 className='text-2xl font-bold leading-8 tracking-tight'>
+                          <Link href={`/${slug}`} className='text-gray-900 dark:text-gray-100'>
+                            {title}
+                          </Link>
+                        </h2>
                         <div className='prose max-w-none text-gray-500 dark:text-gray-400'>
                           {summary}
                         </div>
