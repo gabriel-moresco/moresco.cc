@@ -1,5 +1,4 @@
-import Logo from 'public/static/logo.svg'
-
+import { Logo } from '@/components/icons'
 import { Link } from '@/components/link'
 import { MobileNav } from '@/components/mobile-nav'
 import { SearchButton } from '@/components/search-button'
@@ -19,7 +18,7 @@ export const Header = () => {
         <Link href='/' aria-label={siteMetadata.headerTitle}>
           <div className='flex items-center justify-between'>
             <div className='mr-3'>
-              <Logo />
+              <Logo className='h-8 w-8' />
             </div>
             {typeof siteMetadata.headerTitle === 'string' ? (
               <div className='hidden h-6 text-2xl font-semibold sm:block'>
