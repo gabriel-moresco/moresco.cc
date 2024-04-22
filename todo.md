@@ -1,4 +1,3 @@
-TODO: change og
 TODO: fill about/author page
 TODO: fill home
 TODO: delete sample posts
