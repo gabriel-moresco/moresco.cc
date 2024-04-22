@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation'
 
 import { allBlogs, allAuthors } from 'contentlayer/generated'
 import type { Authors, Blog } from 'contentlayer/generated'
+import { sortPosts, coreContent, allCoreContent } from 'pliny/utils/contentlayer'
 
 import { PostBanner } from '@/layouts/post-banner'
 import { PostLayout } from '@/layouts/post-layout'
@@ -15,8 +16,6 @@ import { MdxComponents } from '@/components/mdx-components'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
 
 import siteMetadata from '@/data/siteMetadata'
-
-import { sortPosts, coreContent, allCoreContent } from 'pliny/utils/contentlayer'
 
 const defaultLayout = 'PostLayout'
 

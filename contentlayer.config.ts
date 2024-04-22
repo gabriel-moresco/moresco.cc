@@ -9,6 +9,7 @@ import {
   remarkImgToJsx,
   extractTocHeadings,
 } from 'pliny/mdx-plugins/index.js'
+import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer.js'
 import readingTime from 'reading-time'
 // Rehype packages
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
@@ -21,8 +22,6 @@ import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
 
 import siteMetadata from './data/siteMetadata'
-
-import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer.js'
 
 const root = process.cwd()
 

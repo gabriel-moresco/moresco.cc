@@ -1,6 +1,8 @@
 import { ReactNode } from 'react'
 
 import type { Blog } from 'contentlayer/generated'
+import { CoreContent } from 'pliny/utils/contentlayer'
+import { formatDate } from 'pliny/utils/formatDate'
 
 import { Comments } from '@/components/comments'
 import { Link } from '@/components/link'
@@ -9,9 +11,6 @@ import { ScrollTopAndComment } from '@/components/scroll-top-and-comment'
 import { SectionContainer } from '@/components/section-container'
 
 import siteMetadata from '@/data/siteMetadata'
-
-import { CoreContent } from 'pliny/utils/contentlayer'
-import { formatDate } from 'pliny/utils/formatDate'
 
 interface LayoutProps {
   content: CoreContent<Blog>

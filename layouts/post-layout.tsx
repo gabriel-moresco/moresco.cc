@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 
 import type { Blog, Authors } from 'contentlayer/generated'
+import { CoreContent } from 'pliny/utils/contentlayer'
 
 import { Comments } from '@/components/comments'
 import { Image } from '@/components/image'
@@ -10,8 +11,6 @@ import { ScrollTopAndComment } from '@/components/scroll-top-and-comment'
 import { SectionContainer } from '@/components/section-container'
 
 import siteMetadata from '@/data/siteMetadata'
-
-import { CoreContent } from 'pliny/utils/contentlayer'
 
 const editUrl = path => `${siteMetadata.siteRepo}/blob/main/data/${path}`
 const discussUrl = path =>
