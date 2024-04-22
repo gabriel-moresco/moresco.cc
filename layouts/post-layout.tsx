@@ -12,10 +12,6 @@ import { SectionContainer } from '@/components/section-container'
 
 import siteMetadata from '@/data/siteMetadata'
 
-const editUrl = path => `${siteMetadata.siteRepo}/blob/main/data/${path}`
-const discussUrl = path =>
-  `https://mobile.twitter.com/search?q=${encodeURIComponent(`${siteMetadata.siteUrl}/${path}`)}`
-
 const postDateTemplate: Intl.DateTimeFormatOptions = {
   weekday: 'long',
   year: 'numeric',
@@ -32,7 +28,7 @@ interface LayoutProps {
 }
 
 export const PostLayout = ({ content, authorDetails, next, prev, children }: LayoutProps) => {
-  const { filePath, path, slug, date, title } = content
+  const { filePath, slug, date, title } = content
 
   return (
     <SectionContainer>
@@ -97,11 +93,9 @@ export const PostLayout = ({ content, authorDetails, next, prev, children }: Lay
             <div className='divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0'>
               <div className='prose max-w-none pb-8 pt-10 dark:prose-invert'>{children}</div>
               <div className='pb-6 pt-6 text-sm text-gray-700 dark:text-gray-300'>
-                <Link href={discussUrl(path)} rel='nofollow'>
-                  Discuss on Twitter
+                <Link href={`${siteMetadata.siteRepo}/blob/main/data/${filePath}`}>
+                  View on GitHub
                 </Link>
-                {` • `}
-                <Link href={editUrl(filePath)}>View on GitHub</Link>
               </div>
               {siteMetadata.comments && (
                 <div
