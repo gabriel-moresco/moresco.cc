@@ -1,0 +1,25 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "files.exclude": {
+    "node_modules": true,
+    ".next": true,
+    ".eslintrc.js": true,
+    ".eslintignore": true,
+    ".prettierrc": true,
+    ".gitignore": true,
+    ".gitattributes": true,
+    ".editorconfig": true,
+    "next-env.d.ts": true,
+    "tsconfig.json": true,
+    "jsconfig.json": true,
+    "yarn.lock": true,
+    ".yarnrc.yml": true,
+    "postcss.config.js": true,
+    "LICENSE.md": true,
+    "contentlayer.config.ts": true,
+    ".husky": true,
+    ".yarn": true,
+    ".contentlayer": true
+  }
+}

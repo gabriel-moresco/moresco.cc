@@ -1,4 +1,3 @@
-TODO: remove blog page and show all posts on home home
 TODO: change Blog property name to Article
 TODO: change logo
 TODO: change og
