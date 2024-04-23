@@ -16,8 +16,8 @@ export const Logo = (props: SVGProps<SVGSVGElement>) => {
           y2='16.5'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#67E8F9' />
-          <stop offset='1' stop-color='#06B6D4' />
+          <stop stopColor='#67E8F9' />
+          <stop offset='1' stopColor='#06B6D4' />
         </linearGradient>
       </defs>
     </svg>
