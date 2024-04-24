@@ -1,4 +1,3 @@
-TODO: create hello world post
 TODO: create email gabriel@moresco.cc
 TODO: publish on Vercel
 TODO: setup analytics and comments
