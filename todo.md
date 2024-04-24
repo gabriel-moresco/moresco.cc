@@ -1,5 +1,3 @@
-TODO: fill about/author page
-TODO: fill home
 TODO: delete sample posts
 TODO: create hello world post
 TODO: create email gabriel@moresco.cc

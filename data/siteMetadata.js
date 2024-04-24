@@ -3,7 +3,8 @@ const siteMetadata = {
   title: 'Gabriel Moresco',
   author: 'Gabriel Moresco',
   headerTitle: 'Gabriel Moresco',
-  description: 'Here I tell you a little about my journey in technology and entrepreneurship.',
+  description:
+    'Here I tell about my journey in technology and entrepreneurship. What I think, what I learn, what is going right and what went wrong.',
   language: 'en-us',
   theme: 'system',
   siteUrl: 'https://moresco.cc',
