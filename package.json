@@ -3,11 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "next dev",
-    "dev": "cross-env INIT_CWD=$PWD next dev",
-    "build": "cross-env INIT_CWD=$PWD next build",
-    "serve": "next start",
-    "analyze": "cross-env ANALYZE=true next build",
+    "dev": "next dev",
     "lint": "eslint . --fix && prettier . --write"
   },
   "dependencies": {
@@ -46,7 +42,6 @@
     "@types/react": "^18.2.73",
     "@typescript-eslint/eslint-plugin": "^7.7.0",
     "@typescript-eslint/parser": "^7.7.0",
-    "cross-env": "^7.0.3",
     "eslint": "^8.45.0",
     "eslint-config-next": "^14.2.2",
     "eslint-config-prettier": "^9.1.0",
