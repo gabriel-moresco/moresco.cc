@@ -1,7 +1,5 @@
 # dependencies
 /node_modules
-/.pnp
-.pnp.js
 
 # next.js
 /.next/
@@ -9,9 +7,8 @@
 public/sitemap.xml
 .vercel
 
-# production
-/build
-*.xml
+# build
+public/static/favicons/browserconfig.xml
 
 # search
 /public/search.json
