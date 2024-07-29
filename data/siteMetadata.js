@@ -14,7 +14,7 @@ const siteMetadata = {
   email: 'gabriel@moresco.cc',
   github: 'https://github.com/gabriel-moresco/moresco.cc',
   twitter: 'https://twitter.com/moreesco',
-  linkedin: 'https://linkedin.comin/gabriel-moresco',
+  linkedin: 'https://linkedin.com/in/gabriel-moresco',
   instagram: 'https://www.instagram.com/_moresco',
   locale: 'en-US',
   analytics: {
