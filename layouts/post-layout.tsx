@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
 
+import { dayjs } from '@/lib/dayjs'
 import type { Post, Author } from 'contentlayer/generated'
 import { CoreContent } from 'pliny/utils/contentlayer'
 
@@ -11,13 +12,6 @@ import { ScrollTopAndComment } from '@/components/scroll-top-and-comment'
 import { SectionContainer } from '@/components/section-container'
 
 import siteMetadata from '@/data/siteMetadata'
-
-const postDateTemplate: Intl.DateTimeFormatOptions = {
-  weekday: 'long',
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-}
 
 interface LayoutProps {
   content: CoreContent<Post>
@@ -41,9 +35,7 @@ export const PostLayout = ({ content, authorDetails, next, prev, children }: Lay
                 <div>
                   <dt className='sr-only'>Published on</dt>
                   <dd className='text-base font-medium leading-6 text-gray-500 dark:text-gray-400'>
-                    <time dateTime={date}>
-                      {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
-                    </time>
+                    <time dateTime={date}>{dayjs.utc(date).format('MMMM D, YYYY')}</time>
                   </dd>
                 </div>
               </dl>

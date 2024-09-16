@@ -12,6 +12,7 @@
     "@tailwindcss/typography": "^0.5.12",
     "autoprefixer": "^10.4.13",
     "contentlayer2": "0.4.4",
+    "dayjs": "^1.11.13",
     "esbuild": "0.20.2",
     "gray-matter": "^4.0.2",
     "hast-util-from-html-isomorphic": "^2.0.0",

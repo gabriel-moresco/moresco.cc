@@ -1,8 +1,8 @@
 import { ReactNode } from 'react'
 
+import { dayjs } from '@/lib/dayjs'
 import type { Post } from 'contentlayer/generated'
 import { CoreContent } from 'pliny/utils/contentlayer'
-import { formatDate } from 'pliny/utils/formatDate'
 
 import { Comments } from '@/components/comments'
 import { Link } from '@/components/link'
@@ -33,7 +33,7 @@ export const PostSimple = ({ content, next, prev, children }: LayoutProps) => {
                 <div>
                   <dt className='sr-only'>Published on</dt>
                   <dd className='text-base font-medium leading-6 text-gray-500 dark:text-gray-400'>
-                    <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
+                    <time dateTime={date}>{dayjs.utc(date).format('MMMM D, YYYY')}</time>
                   </dd>
                 </div>
               </dl>

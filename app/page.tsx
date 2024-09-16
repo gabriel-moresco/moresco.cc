@@ -1,6 +1,6 @@
+import { dayjs } from '@/lib/dayjs'
 import { allPosts } from 'contentlayer/generated'
 import { sortPosts, allCoreContent } from 'pliny/utils/contentlayer'
-import { formatDate } from 'pliny/utils/formatDate'
 
 import { Link } from '@/components/link'
 
@@ -35,7 +35,7 @@ export default async function Page() {
                   <dl>
                     <dt className='sr-only'>Published on</dt>
                     <dd className='text-base font-medium leading-6 text-gray-500 dark:text-gray-400'>
-                      <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
+                      <time dateTime={date}>{dayjs.utc(date).format('MMMM D, YYYY')}</time>
                     </dd>
                   </dl>
                   <div className='space-y-5 xl:col-span-3'>
