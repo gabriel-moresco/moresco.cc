@@ -4,7 +4,6 @@ import { Author, allAuthors } from 'contentlayer/generated'
 import { coreContent } from 'pliny/utils/contentlayer'
 
 import { Image } from '@/components/image'
-import { SocialIcon } from '@/components/social-icons'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
 
 import siteMetadata from '@/data/siteMetadata'
@@ -30,8 +29,7 @@ export const metadata: Metadata = {
 export default function Page() {
   const author = allAuthors.find(p => p.slug === 'default') as Author
 
-  const { name, avatar, occupation, company, email, twitter, linkedin, github } =
-    coreContent(author)
+  const { name, avatar, occupation } = coreContent(author)
 
   return (
     <>
@@ -54,13 +52,6 @@ export default function Page() {
             )}
             <h3 className='pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight'>{name}</h3>
             <div className='text-gray-500 dark:text-gray-400'>{occupation}</div>
-            <div className='text-gray-500 dark:text-gray-400'>{company}</div>
-            <div className='flex space-x-3 pt-6'>
-              <SocialIcon kind='mail' href={`mailto:${email}`} />
-              <SocialIcon kind='github' href={github} />
-              <SocialIcon kind='linkedin' href={linkedin} />
-              <SocialIcon kind='twitter' href={twitter} />
-            </div>
           </div>
           <div className='prose max-w-none pb-8 pt-8 dark:prose-invert xl:col-span-2'>
             <MDXLayoutRenderer code={author.body.code} />

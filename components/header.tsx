@@ -4,8 +4,6 @@ import { MobileNav } from '@/components/mobile-nav'
 import { SearchButton } from '@/components/search-button'
 import { ThemeSwitch } from '@/components/theme-switch'
 
-import siteMetadata from '@/data/siteMetadata'
-
 export const links = [
   { href: '/', title: 'Home' },
   { href: '/about', title: 'About' },
@@ -14,17 +12,8 @@ export const links = [
 export const Header = () => {
   return (
     <header className='flex items-center justify-between py-8'>
-      <Link href='/' aria-label={siteMetadata.headerTitle}>
-        <div className='flex items-center justify-between'>
-          <Logo className='mr-4 h-14 w-14' />
-          {typeof siteMetadata.headerTitle === 'string' ? (
-            <div className='hidden h-6 text-2xl font-semibold sm:block'>
-              {siteMetadata.headerTitle}
-            </div>
-          ) : (
-            siteMetadata.headerTitle
-          )}
-        </div>
+      <Link href='/' aria-label='Gabriel Moresco'>
+        <Logo className='mr-4 h-14 w-14' />
       </Link>
       <div className='flex items-center space-x-4 leading-5 sm:space-x-6'>
         {links
