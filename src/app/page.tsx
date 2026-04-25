@@ -17,7 +17,7 @@ type SocialEntry = {
 
 const socials: SocialEntry[] = [
   {
-    href: "https://github.com/gabriel-moresco",
+    href: "https://github.com/gabriel-moresco/moresco.cc",
     label: "GitHub",
     icon: GithubLogoIcon,
     external: true,
