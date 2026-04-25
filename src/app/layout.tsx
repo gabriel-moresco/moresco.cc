@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Geist, JetBrains_Mono } from "next/font/google"
+import { Fraunces, JetBrains_Mono } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -46,14 +46,15 @@ export const viewport = {
   maximumScale: 1, // Disable auto-zoom on mobile Safari
 }
 
-const fontSans = Geist({
-  subsets: ["latin"],
-  variable: "--font-sans",
-})
-
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
+})
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  variable: "--font-serif",
 })
 
 export default function RootLayout({
@@ -67,9 +68,9 @@ export default function RootLayout({
       suppressHydrationWarning
       className={cn(
         "antialiased",
-        fontSans.variable,
         "font-mono",
-        jetbrainsMono.variable
+        jetbrainsMono.variable,
+        fraunces.variable
       )}
     >
       <body>

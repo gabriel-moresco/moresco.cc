@@ -1,19 +1,139 @@
-import { Button } from "@/components/ui/button"
+import Image from "next/image"
+import Link from "next/link"
+import type { Icon as PhosphorIcon } from "@phosphor-icons/react/dist/lib/types"
+import {
+  GithubLogoIcon,
+  LinkedinLogoIcon,
+  BriefcaseIcon,
+  EnvelopeIcon,
+} from "@phosphor-icons/react/dist/ssr"
+
+type SocialEntry = {
+  href: string
+  label: string
+  icon: PhosphorIcon
+  external?: boolean
+}
+
+const socials: SocialEntry[] = [
+  {
+    href: "https://github.com/gabriel-moresco",
+    label: "GitHub",
+    icon: GithubLogoIcon,
+    external: true,
+  },
+  {
+    href: "https://linkedin.com/in/gabriel-moresco",
+    label: "LinkedIn",
+    icon: LinkedinLogoIcon,
+    external: true,
+  },
+  {
+    href: "https://l.moresco.cc/projects",
+    label: "Portfolio",
+    icon: BriefcaseIcon,
+    external: true,
+  },
+  {
+    href: "mailto:gabriel.moresco25@gmail.com",
+    label: "Email",
+    icon: EnvelopeIcon,
+  },
+]
 
 export default function Page() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
+    <main className="relative flex min-h-svh items-center justify-center px-6 py-20">
+      <article className="flex w-full max-w-[440px] flex-col gap-7">
+        <div
+          className="relative size-[72px] animate-in overflow-hidden bg-muted duration-500 ease-out fill-mode-both fade-in"
+          style={{ animationDelay: "60ms" }}
+        >
+          <Image
+            src="/gabriel.jpg"
+            alt="Portrait of Gabriel Moresco"
+            width={144}
+            height={144}
+            priority
+            className="size-full object-cover"
+          />
         </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
+
+        <header
+          className="flex animate-in flex-col gap-1 duration-500 ease-out fill-mode-both fade-in slide-in-from-bottom-3"
+          style={{ animationDelay: "180ms" }}
+        >
+          <h1 className="text-base font-medium tracking-tight text-foreground">
+            Gabriel Moresco
+          </h1>
+          <p className="flex items-baseline gap-1.5 text-xs text-muted-foreground">
+            <span className="font-serif text-sm leading-none italic">
+              Product Engineer
+            </span>
+            <span aria-hidden className="text-muted-foreground/60">
+              ·
+            </span>
+            <span>Brazil</span>
+          </p>
+        </header>
+
+        <div
+          className="flex animate-in flex-col gap-3.5 text-[13px] leading-relaxed text-muted-foreground duration-500 ease-out fill-mode-both fade-in slide-in-from-bottom-3"
+          style={{ animationDelay: "300ms" }}
+        >
+          <p>
+            <span className="text-foreground">I&apos;m a builder-minded</span>{" "}
+            Product Engineer from Brazil, with 8+ years of experience building
+            web, mobile, and AI products.
+          </p>
+          <p>
+            Co-founded and led technology for early-stage startups, including{" "}
+            <span className="text-foreground">Favorito</span>, a B2B2C mobile
+            app that grew to 130k downloads, 27k MAU, and 700 paying business
+            customers.
+          </p>
         </div>
+
+        <div
+          className="flex animate-in items-center gap-1.5 pt-1 duration-500 ease-out fill-mode-both fade-in slide-in-from-bottom-3"
+          style={{ animationDelay: "420ms" }}
+        >
+          {socials.map((social) => (
+            <SocialButton key={social.href} {...social} />
+          ))}
+        </div>
+      </article>
+
+      <div
+        className="pointer-events-none fixed right-5 bottom-5 hidden animate-in text-[10px] tracking-wide text-muted-foreground/70 uppercase delay-600 duration-500 ease-out fill-mode-both select-none fade-in sm:block"
+        aria-hidden
+      >
+        Press{" "}
+        <kbd className="mx-0.5 inline-flex h-[18px] min-w-[18px] items-center justify-center border border-border/80 bg-muted/40 px-1 text-[10px] font-medium text-muted-foreground">
+          D
+        </kbd>{" "}
+        to toggle theme
       </div>
-    </div>
+    </main>
+  )
+}
+
+const SocialButton = ({ href, label, icon: Icon, external }: SocialEntry) => {
+  const isExternal = external ?? false
+
+  return (
+    <Link
+      href={href}
+      aria-label={label}
+      title={label}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
+      className="group inline-flex size-8 items-center justify-center border border-border text-muted-foreground transition-all duration-200 outline-none hover:border-foreground/30 hover:text-foreground focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/40 active:translate-y-px"
+    >
+      <Icon
+        className="size-4 transition-transform duration-200 group-hover:scale-110"
+        weight="light"
+      />
+    </Link>
   )
 }
