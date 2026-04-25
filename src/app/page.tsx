@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { ThemeToggle } from "@/components/theme-toggle"
 import type { Icon as PhosphorIcon } from "@phosphor-icons/react/dist/lib/types"
 import {
   GithubLogoIcon,
@@ -101,6 +102,7 @@ export default function Page() {
           {socials.map((social) => (
             <SocialButton key={social.href} {...social} />
           ))}
+          <ThemeToggle />
         </div>
       </article>
 
