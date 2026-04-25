@@ -4,6 +4,7 @@ import { Geist, JetBrains_Mono } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
+import { Analytics } from "@vercel/analytics/next"
 
 const title = "Gabriel Moresco"
 const description = "I enjoy building things."
@@ -73,6 +74,8 @@ export default function RootLayout({
     >
       <body>
         <ThemeProvider>{children}</ThemeProvider>
+
+        <Analytics />
       </body>
     </html>
   )
