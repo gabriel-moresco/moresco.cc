@@ -1,0 +1,79 @@
+import type { Metadata } from "next"
+import { Geist, JetBrains_Mono } from "next/font/google"
+
+import "./globals.css"
+import { ThemeProvider } from "@/components/theme-provider"
+import { cn } from "@/lib/utils"
+
+const title = "Gabriel Moresco"
+const description = "I enjoy building things."
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://moresco.cc"),
+  title,
+  description,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title,
+    description,
+    type: "website",
+    url: "./",
+    siteName: title,
+    images: {
+      url: "/og.png",
+      type: "image/png",
+      width: 1200,
+      height: 630,
+    },
+  },
+  twitter: {
+    title,
+    description,
+    card: "summary_large_image",
+    images: {
+      url: "/og.png",
+      type: "image/png",
+      width: 1200,
+      height: 630,
+    },
+  },
+}
+
+export const viewport = {
+  maximumScale: 1, // Disable auto-zoom on mobile Safari
+}
+
+const fontSans = Geist({
+  subsets: ["latin"],
+  variable: "--font-sans",
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+})
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={cn(
+        "antialiased",
+        fontSans.variable,
+        "font-mono",
+        jetbrainsMono.variable
+      )}
+    >
+      <body>
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
+    </html>
+  )
+}
