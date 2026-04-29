@@ -1,6 +1,20 @@
 # AGENTS.md
 
-This project is my personal website [moresco.cc](https://moresco.cc)
+This project is my personal website [moresco.cc](https://moresco.cc) - a minimal, editorial-style homepage built with Next.js and Tailwind CSS.
+
+## Design Directions
+
+- Refined editorial monospace. The aesthetic is intentionally restrained: sharp corners everywhere, no border-radius, tight typographic hierarchy, and generous negative space.
+- Centered card (max-w-[440px]) layout with a vertical flow.
+
+### Typography
+
+- Base: JetBrains Mono (monospace everywhere)
+- Accent: Fraunces italic at text-sm on "Product Engineer"
+
+### Icons
+
+- Phosphor Icons (light weight, SSR imports)
 
 ## Rules
 
