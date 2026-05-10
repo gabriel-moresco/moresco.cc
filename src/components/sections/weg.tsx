@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowUpRightIcon } from "@phosphor-icons/react/dist/ssr"
+import { YouTubeEmbed } from "@next/third-parties/google"
 
 type WegProps = {
   delay: number
@@ -103,13 +104,10 @@ export const Weg = ({ delay }: WegProps) => (
           license fees for more than 1,500 engineers was being saved.
         </p>
       </div>
-      <div className="relative overflow-hidden border border-border">
-        <Image
-          src="/static/wau-sap-connector.png"
-          alt="Screenshot of the WAU SAP Connector showing the document structure for SolidWorks integration"
-          width={1553}
-          height={824}
-          className="size-full object-cover"
+      <div className="aspect-video overflow-hidden border border-border [&_lite-youtube]:size-full [&_lite-youtube]:max-w-full">
+        <YouTubeEmbed
+          videoid="pdNS3ZwGv_U"
+          playlabel="Play: WAU SAP Connector demo"
         />
       </div>
     </article>
