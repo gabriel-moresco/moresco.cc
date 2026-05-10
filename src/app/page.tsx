@@ -8,7 +8,7 @@ import { ThemeToggleHint } from "@/components/theme-toggle-hint"
 export default function Page() {
   return (
     <main className="relative flex min-h-svh items-center justify-center px-6 py-48">
-      <article className="flex w-full max-w-[440px] flex-col gap-12">
+      <article className="flex w-full max-w-[440px] flex-col gap-16">
         <Introduction delay={60} />
         <Divider delay={510} />
         <OpenSource delay={540} />
