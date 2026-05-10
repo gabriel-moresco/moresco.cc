@@ -29,7 +29,7 @@ export const Favorito = ({ delay }: FavoritoProps) => (
         id="favorito-heading"
         className="text-sm font-medium tracking-tight text-foreground underline-offset-4 group-hover:underline"
       >
-        Favorito
+        Favorito (formerly Que Barbada)
       </h2>
       <ArrowUpRightIcon
         aria-hidden
