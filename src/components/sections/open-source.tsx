@@ -66,7 +66,7 @@ const RepoBanner = ({ href, name, image }: RepoEntry) => (
       alt={`${name} preview`}
       width={1200}
       height={600}
-      className="size-full object-cover"
+      className="size-full object-cover transition-opacity duration-200 group-hover:opacity-80"
     />
   </Link>
 )
