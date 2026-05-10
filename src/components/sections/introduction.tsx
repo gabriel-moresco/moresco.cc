@@ -40,11 +40,15 @@ const socials: SocialEntry[] = [
   },
 ]
 
-export const Introduction = () => (
+type IntroductionProps = {
+  delay: number
+}
+
+export const Introduction = ({ delay }: IntroductionProps) => (
   <section aria-labelledby="profile-heading" className="flex flex-col gap-7">
     <div
       className="relative size-[72px] animate-in overflow-hidden bg-muted duration-500 ease-out fill-mode-both fade-in"
-      style={{ animationDelay: "60ms" }}
+      style={{ animationDelay: `${delay}ms` }}
     >
       <Image
         src="/static/gabriel.jpg"
@@ -58,7 +62,7 @@ export const Introduction = () => (
 
     <header
       className="flex animate-in flex-col gap-1 duration-500 ease-out fill-mode-both fade-in slide-in-from-bottom-3"
-      style={{ animationDelay: "180ms" }}
+      style={{ animationDelay: `${delay + 120}ms` }}
     >
       <h1
         id="profile-heading"
@@ -79,7 +83,7 @@ export const Introduction = () => (
 
     <div
       className="flex animate-in flex-col gap-3.5 text-[13px] leading-relaxed text-muted-foreground duration-500 ease-out fill-mode-both fade-in slide-in-from-bottom-3"
-      style={{ animationDelay: "300ms" }}
+      style={{ animationDelay: `${delay + 240}ms` }}
     >
       <p>
         <span className="text-foreground">I&apos;m a builder-minded</span>{" "}
@@ -95,7 +99,7 @@ export const Introduction = () => (
 
     <div
       className="flex animate-in items-center gap-1.5 duration-500 ease-out fill-mode-both fade-in slide-in-from-bottom-3"
-      style={{ animationDelay: "420ms" }}
+      style={{ animationDelay: `${delay + 360}ms` }}
     >
       {socials.map((social) => (
         <SocialButton key={social.href} {...social} />

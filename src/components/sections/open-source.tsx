@@ -20,11 +20,15 @@ const repos: RepoEntry[] = [
   },
 ]
 
-export const OpenSource = () => (
+type OpenSourceProps = {
+  delay: number
+}
+
+export const OpenSource = ({ delay }: OpenSourceProps) => (
   <section
     aria-labelledby="repos-heading"
     className="flex animate-in flex-col gap-4 duration-500 ease-out fill-mode-both fade-in slide-in-from-bottom-3"
-    style={{ animationDelay: "540ms" }}
+    style={{ animationDelay: `${delay}ms` }}
   >
     <div className="flex flex-col gap-2">
       <h2
