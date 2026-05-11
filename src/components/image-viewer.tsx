@@ -12,12 +12,14 @@ import { cn } from "@/lib/utils"
 type ImageViewerProps = Omit<ImageProps, "className"> & {
   triggerClassName?: string
   imageClassName?: string
+  bordered?: boolean
 }
 
 export const ImageViewer = ({
   alt,
   triggerClassName,
   imageClassName,
+  bordered = true,
   ...imageProps
 }: ImageViewerProps) => {
   const { width, height, ...restImageProps } = imageProps
@@ -29,7 +31,9 @@ export const ImageViewer = ({
         <button
           type="button"
           className={cn(
-            "group relative block w-full appearance-none overflow-hidden border border-border bg-transparent p-0 transition-colors duration-200 outline-none hover:border-foreground/30 focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/40",
+            "group relative block w-full appearance-none overflow-hidden bg-transparent p-0 outline-none focus-visible:ring-2 focus-visible:ring-ring/40",
+            bordered &&
+              "border border-border transition-colors duration-200 hover:border-foreground/30 focus-visible:border-ring",
             triggerClassName
           )}
         >
