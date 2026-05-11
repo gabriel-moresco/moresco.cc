@@ -138,5 +138,19 @@ export const Favorito = ({ delay }: FavoritoProps) => (
         different numbers.
       </p>
     </div>
+    <div className="flex flex-col gap-5">
+      <p className="text-[13px] leading-relaxed text-muted-foreground">
+        The day we reached <span className="text-foreground">Top 26</span> in
+        the App Store Food &amp; Drink ranking.
+      </p>
+      <ImageViewer
+        src="/static/favorito-store-ranking.png"
+        alt="Favorito ranked Top 26 in the App Store Food and Drink ranking"
+        width={814}
+        height={1023}
+        triggerClassName="mx-auto max-w-[360px]"
+        bordered={false}
+      />
+    </div>
   </section>
 )
