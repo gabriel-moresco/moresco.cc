@@ -42,13 +42,13 @@ export const ImageViewer = ({
     </DialogTrigger>
     <DialogContent
       showCloseButton={false}
-      className="max-w-[95vw] border-0 bg-transparent p-0 ring-0 sm:max-w-[95vw]"
+      className="w-fit max-w-[95vw] border-0 bg-transparent p-0 ring-0 sm:max-w-[95vw]"
     >
       <DialogTitle className="sr-only">{alt}</DialogTitle>
       <Image
         {...imageProps}
         alt={alt}
-        className="block h-auto max-h-[90vh] w-full object-contain"
+        className="block h-auto max-h-[90vh] w-auto max-w-[95vw]"
       />
     </DialogContent>
   </Dialog>
