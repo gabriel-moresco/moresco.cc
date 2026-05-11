@@ -1,8 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowUpRightIcon } from "@phosphor-icons/react/dist/ssr"
-import { YouTubeEmbed } from "@next/third-parties/google"
 import { ImageViewer } from "@/components/image-viewer"
+import { VideoViewer } from "@/components/video-viewer"
 
 type WegProps = {
   delay: number
@@ -102,12 +102,13 @@ export const Weg = ({ delay }: WegProps) => (
           license fees for more than 1,500 engineers was being saved.
         </p>
       </div>
-      <div className="aspect-video overflow-hidden border border-border transition-colors duration-200 hover:border-foreground/30 [&_lite-youtube]:size-full [&_lite-youtube]:max-w-full">
-        <YouTubeEmbed
-          videoid="pdNS3ZwGv_U"
-          playlabel="Play: WAU SAP Connector demo"
-        />
-      </div>
+      <VideoViewer
+        videoid="pdNS3ZwGv_U"
+        thumbnail="/static/wsc.png"
+        alt="WAU SAP Connector demo"
+        width={1553}
+        height={824}
+      />
     </article>
   </section>
 )
