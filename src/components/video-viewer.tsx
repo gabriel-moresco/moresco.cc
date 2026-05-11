@@ -62,6 +62,7 @@ export const VideoViewer = ({
     </DialogTrigger>
     <DialogContent
       showCloseButton={false}
+      aria-describedby={undefined}
       className="w-fit max-w-[95vw] border-0 bg-transparent p-0 ring-0 sm:max-w-[95vw]"
     >
       <DialogTitle className="sr-only">{alt}</DialogTitle>
@@ -79,7 +80,6 @@ export const VideoViewer = ({
           title={alt}
           src={`https://www.youtube.com/embed/${videoid}?autoplay=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1`}
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-          allowFullScreen
           className="absolute inset-0 size-full border-0"
         />
       </div>

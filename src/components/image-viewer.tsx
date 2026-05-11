@@ -42,6 +42,7 @@ export const ImageViewer = ({
     </DialogTrigger>
     <DialogContent
       showCloseButton={false}
+      aria-describedby={undefined}
       className="w-fit max-w-[95vw] border-0 bg-transparent p-0 ring-0 sm:max-w-[95vw]"
     >
       <DialogTitle className="sr-only">{alt}</DialogTitle>
