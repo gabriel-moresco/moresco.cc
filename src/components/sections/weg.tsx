@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowUpRightIcon } from "@phosphor-icons/react/dist/ssr"
 import { YouTubeEmbed } from "@next/third-parties/google"
+import { ImageViewer } from "@/components/image-viewer"
 
 type WegProps = {
   delay: number
@@ -73,15 +74,12 @@ export const Weg = ({ delay }: WegProps) => (
           needs that were not being met by market products, such as AutoCAD.
         </p>
       </div>
-      <div className="relative overflow-hidden border border-border">
-        <Image
-          src="/static/leopard.png"
-          alt="Screenshot of the Leopard CAD software showing an electrical panel diagram"
-          width={1920}
-          height={1040}
-          className="size-full object-cover"
-        />
-      </div>
+      <ImageViewer
+        src="/static/leopard.png"
+        alt="Screenshot of the Leopard CAD software showing an electrical panel diagram"
+        width={1920}
+        height={1040}
+      />
     </article>
 
     <article className="flex flex-col gap-5">
@@ -104,7 +102,7 @@ export const Weg = ({ delay }: WegProps) => (
           license fees for more than 1,500 engineers was being saved.
         </p>
       </div>
-      <div className="aspect-video overflow-hidden border border-border [&_lite-youtube]:size-full [&_lite-youtube]:max-w-full">
+      <div className="aspect-video overflow-hidden border border-border transition-colors duration-200 hover:border-foreground/30 [&_lite-youtube]:size-full [&_lite-youtube]:max-w-full">
         <YouTubeEmbed
           videoid="pdNS3ZwGv_U"
           playlabel="Play: WAU SAP Connector demo"

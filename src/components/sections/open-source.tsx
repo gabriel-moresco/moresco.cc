@@ -59,14 +59,18 @@ const RepoBanner = ({ href, name, image }: RepoEntry) => (
     title={name}
     target="_blank"
     rel="noopener noreferrer"
-    className="group relative block aspect-2/1 overflow-hidden border border-border transition-all duration-200 outline-none hover:border-foreground/30 focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/40 active:translate-y-px"
+    className="group relative block aspect-2/1 overflow-hidden border border-border transition-colors duration-200 outline-none hover:border-foreground/30 focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/40"
   >
     <Image
       src={image}
       alt={`${name} preview`}
       width={1200}
       height={600}
-      className="size-full object-cover transition-opacity duration-200 group-hover:opacity-80"
+      className="size-full object-cover"
+    />
+    <span
+      aria-hidden
+      className="absolute inset-0 bg-background opacity-0 transition-opacity duration-200 group-hover:opacity-20"
     />
   </Link>
 )
