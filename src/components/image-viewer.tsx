@@ -19,38 +19,53 @@ export const ImageViewer = ({
   triggerClassName,
   imageClassName,
   ...imageProps
-}: ImageViewerProps) => (
-  <Dialog>
-    <DialogTrigger asChild>
-      <button
-        type="button"
-        className={cn(
-          "group relative block w-full appearance-none overflow-hidden border border-border bg-transparent p-0 transition-colors duration-200 outline-none hover:border-foreground/30 focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/40",
-          triggerClassName
-        )}
+}: ImageViewerProps) => {
+  const { width, height, ...restImageProps } = imageProps
+  const aspectRatio = Number(width) / Number(height)
+
+  return (
+    <Dialog>
+      <DialogTrigger asChild>
+        <button
+          type="button"
+          className={cn(
+            "group relative block w-full appearance-none overflow-hidden border border-border bg-transparent p-0 transition-colors duration-200 outline-none hover:border-foreground/30 focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/40",
+            triggerClassName
+          )}
+        >
+          <Image
+            {...imageProps}
+            alt={alt}
+            className={cn("size-full object-cover", imageClassName)}
+          />
+          <span
+            aria-hidden
+            className="absolute inset-0 bg-background opacity-0 transition-opacity duration-200 group-hover:opacity-20"
+          />
+        </button>
+      </DialogTrigger>
+      <DialogContent
+        showCloseButton={false}
+        aria-describedby={undefined}
+        className="w-fit max-w-none border-0 bg-transparent p-0 ring-0 sm:max-w-none"
       >
-        <Image
-          {...imageProps}
-          alt={alt}
-          className={cn("size-full object-cover", imageClassName)}
-        />
-        <span
-          aria-hidden
-          className="absolute inset-0 bg-background opacity-0 transition-opacity duration-200 group-hover:opacity-20"
-        />
-      </button>
-    </DialogTrigger>
-    <DialogContent
-      showCloseButton={false}
-      aria-describedby={undefined}
-      className="w-fit max-w-[95vw] border-0 bg-transparent p-0 ring-0 sm:max-w-[95vw]"
-    >
-      <DialogTitle className="sr-only">{alt}</DialogTitle>
-      <Image
-        {...imageProps}
-        alt={alt}
-        className="block h-auto max-h-[90vh] w-auto max-w-[95vw]"
-      />
-    </DialogContent>
-  </Dialog>
-)
+        <DialogTitle className="sr-only">{alt}</DialogTitle>
+        <div
+          className="relative"
+          style={{
+            width: `min(95vw, ${(95 * aspectRatio).toFixed(4)}vh)`,
+            aspectRatio: `${width} / ${height}`,
+          }}
+        >
+          <Image
+            {...restImageProps}
+            alt={alt}
+            fill
+            sizes="95vw"
+            className="object-contain"
+          />
+        </div>
+      </DialogContent>
+    </Dialog>
+  )
+}
