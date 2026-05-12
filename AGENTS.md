@@ -5,7 +5,7 @@ This project is my personal website [moresco.cc](https://moresco.cc) - a minimal
 ## Design Directions
 
 - Refined editorial monospace. The aesthetic is intentionally restrained: sharp corners everywhere, no border-radius, tight typographic hierarchy, and generous negative space.
-- Centered card (max-w-[440px]) layout with a vertical flow.
+- Centered card (max-w-[520px]) layout with a vertical flow.
 
 ### Typography
 
