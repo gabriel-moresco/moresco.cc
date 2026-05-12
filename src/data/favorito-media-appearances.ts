@@ -30,15 +30,15 @@ export type FavoritoMediaAppearance =
 export const favoritoMediaAppearances: FavoritoMediaAppearance[] = [
   {
     type: "online",
-    date: "27 Sep 2022",
-    outlet: "Engeplus",
+    date: "14 Nov 2023",
+    outlet: "Visse",
     title:
-      "App promises to make Happy Hour easier in Criciuma and the surrounding region",
-    href: "https://www.engeplus.com.br/noticia/espaco-empreendedor/2022/aplicativo-promete-facilitar-happy-hour-em-criciuma-e-regiao",
+      "App that connects you to the best food and dining venues arrives in BC",
+    href: "https://www.visse.com.br/app-que-te-conecta-aos-melhores-estabelecimentos-de-gastronomia-chega-a-bc/",
     description:
-      "Plataforma entra em operação no Sul do Estado a partir de 1º outubro",
-    image: "/static/favorito-media/thumbnails/01.jpg",
-    favicon: "/static/favorito-media/favicons/engeplus.ico",
+      "Com uma centena de opções entre bares e restaurantes, Balneário Camboriú se tornou uma das cidades mais procuradas por turistas que viajam para Santa Catarina não só por suas belezas naturais, mas pelos atrativos gastronômicos. O turismo de gastronomia é um dos carros chefes da cidade, que conta com uma orla repleta de opções para ...",
+    image: "/static/favorito-media/thumbnails/14.jpg",
+    favicon: "/static/favorito-media/favicons/visse.png",
   },
   {
     type: "newspaper",
@@ -64,30 +64,6 @@ export const favoritoMediaAppearances: FavoritoMediaAppearance[] = [
   },
   {
     type: "online",
-    date: "07 Oct 2022",
-    outlet: "Noticenter",
-    title:
-      'Que Barbada app, created in Jaragua do Sul, arrives to "simplify going out"',
-    href: "https://www.noticenter.com.br/n.php?ID=31809&T=aplicativo-que-barbada-criado-em-jaragua-do-sul-chega-para-descomplicar-o-role",
-    description:
-      "Aplicativo Que Barbada, criado em Jaraguá do Sul, funciona como um “Tinder do rolê”, conectando usuários a bares, restaurantes e outros locais de lazer, com informações completas, promoções e agenda de eventos.",
-    image: "/static/favorito-media/thumbnails/01.jpg",
-    favicon: "/static/favorito-media/favicons/noticenter.png",
-  },
-  {
-    type: "online",
-    date: "02 Dec 2022",
-    outlet: "Diario Jaragua",
-    title:
-      "App created in Jaragua helps customers find the ideal bars and restaurants",
-    href: "https://www.diariodajaragua.com.br/geral/aplicativo-criado-em-jaragua-ajuda-clientes-a-encontrarem-bares-e/473264/",
-    description:
-      "O app Que Barbada, desenvolvido para ajudar na decisão do que fazer nos momentos de lazer, já está disponível na região de Jaraguá do Sul e Criciúma",
-    image: "/static/favorito-media/thumbnails/01.jpg",
-    favicon: "/static/favorito-media/favicons/diario-jaragua.png",
-  },
-  {
-    type: "online",
     date: "27 Feb 2023",
     outlet: "ND Mais",
     title:
@@ -100,50 +76,51 @@ export const favoritoMediaAppearances: FavoritoMediaAppearance[] = [
   },
   {
     type: "online",
-    date: "31 Mar 2023",
-    outlet: "OCP News",
+    date: "20 Jun 2023",
+    outlet: "G1",
     title:
-      'Nascido aqui ou vindo de La, meu lugar e Jaragua - Cristian e Gabriel "Que Barbada"',
-    href: "https://ocp.news/colunista/joao-andrade/nascido-aqui-ou-vindo-de-la-meu-lugar-e-jaragua-cristian-e-gabriel-que-barbada",
+      "Companies from Santa Catarina project their innovative DNA around the world",
+    href: "https://g1.globo.com/sc/santa-catarina/sc-que-da-certo/noticia/2023/06/20/empresas-catarinenses-projetam-seu-dna-inovador-ao-redor-do-mundo.ghtml",
     description:
-      "Em abril de 2022, decidimos largar nossos empregos para criar uma solução inovadora: o aplicativo Que Barbada. Ele foi desenvolvido para conectar pessoas à bares, pubs, restaurantes e eventos da cidade, de uma maneira simples e rápida.",
-    image: "/static/favorito-media/thumbnails/05.jpg",
-    favicon: "/static/favorito-media/favicons/ocp-news.jpg",
+      "Fortalecendo o senso de comunidade e preservando raízes locais, cases do SC Que Dá Certo compartilham histórias inspiradoras com o mercado em Jaraguá do Sul",
+    image: "/static/favorito-media/thumbnails/10.jpg",
+    favicon: "/static/favorito-media/favicons/g1.png",
   },
   {
     type: "online",
-    date: "11 Apr 2023",
-    outlet: "ND Mais",
-    title: "Inova Criciuma features ten innovative projects in its 3rd edition",
-    href: "https://ndmais.com.br/noticias/inova-criciuma-contempla-dez-projetos-inovadores-nesta-3a-edicao/",
+    date: "07 Mar 2024",
+    outlet: "Satc",
+    title:
+      "Startup from Colearning Satc receives investment from a national accelerator",
+    href: "https://unisatc.com.br/favorito-startup-satc/",
     description:
-      "A terceira edição do Inova Criciúma, iniciativa da prefeitura, contempla dez projetos inovadores com R$ 25 mil cada",
-    image: "/static/favorito-media/thumbnails/06.jpg",
-    favicon: "/static/favorito-media/favicons/nd-mais.png",
+      "Startup foi uma das contempladas pela Wow Aceleradora e recebeu o aporte de R$ 200 mil para ajudar no impulsionamento do negócio.",
+    image: "/static/favorito-media/thumbnails/20.jpg",
+    favicon: "/static/favorito-media/favicons/satc.png",
   },
   {
     type: "online",
-    date: "13 Apr 2023",
+    date: "27 Sep 2022",
     outlet: "Engeplus",
     title:
-      "Que Barbada celebrates one year as a startup and 1st Place in the Inova Criciuma Award",
-    href: "https://www.engeplus.com.br/noticia/economia/2023/187392-que-barbada-comemora-um-ano-de-startup-e-1-lugar-no-premio-inova-criciuma",
+      "App promises to make Happy Hour easier in Criciuma and the surrounding region",
+    href: "https://www.engeplus.com.br/noticia/espaco-empreendedor/2022/aplicativo-promete-facilitar-happy-hour-em-criciuma-e-regiao",
     description:
-      "Com proposta de facilitar o happy hour, empreendedores comemoram um ano e muitas vitórias",
-    image: "/static/favorito-media/thumbnails/07.jpg",
+      "Plataforma entra em operação no Sul do Estado a partir de 1º outubro",
+    image: "/static/favorito-media/thumbnails/01.jpg",
     favicon: "/static/favorito-media/favicons/engeplus.ico",
   },
   {
     type: "online",
-    date: "19 Apr 2023",
-    outlet: "Agora no Vale",
+    date: "14 Nov 2023",
+    outlet: "Viva Balneario",
     title:
-      "Award-winning startup from SC arrives in Lajeado to ensure your happy hour",
-    href: "https://agoranovale.com.br/noticias/valedotaquari/startup-premiada-de-sc-chega-em-lajeado-para-garantir-o-seu-happy-hour/",
+      "App that connects you to the best restaurants arrives in Balneario Camboriu",
+    href: "https://www.vivabalneario.com.br/blog/app-que-conecta-aos-melhores-restaurantes-chega-em-balneario-camboriu/",
     description:
-      "Plataforma conhecida por ser o Ifood do presencial em Santa Catarina é a pedida para quem está “perdido no rolê” Há quem diga que quinta-feira é o início",
-    image: "/static/favorito-media/thumbnails/01.jpg",
-    favicon: "/static/favorito-media/favicons/agora-no-vale.png",
+      "Com uma centena de opções entre bares e restaurantes, Balneário Camboriú se tornou uma das cidades mais procuradas por turistas que viajam para Santa Catarina não só por suas belezas naturais, mas pelos atrativos gastronômicos. O turismo de gastronomia é um dos carros chefes da cidade, que conta com uma orla repleta de opções ...",
+    image: "/static/favorito-media/thumbnails/14.jpg",
+    favicon: "/static/favorito-media/favicons/viva-balneario.ico",
   },
   {
     type: "online",
@@ -159,15 +136,96 @@ export const favoritoMediaAppearances: FavoritoMediaAppearance[] = [
   },
   {
     type: "online",
-    date: "20 Jun 2023",
-    outlet: "G1",
+    date: "19 Apr 2023",
+    outlet: "Agora no Vale",
     title:
-      "Companies from Santa Catarina project their innovative DNA around the world",
-    href: "https://g1.globo.com/sc/santa-catarina/sc-que-da-certo/noticia/2023/06/20/empresas-catarinenses-projetam-seu-dna-inovador-ao-redor-do-mundo.ghtml",
+      "Award-winning startup from SC arrives in Lajeado to ensure your happy hour",
+    href: "https://agoranovale.com.br/noticias/valedotaquari/startup-premiada-de-sc-chega-em-lajeado-para-garantir-o-seu-happy-hour/",
     description:
-      "Fortalecendo o senso de comunidade e preservando raízes locais, cases do SC Que Dá Certo compartilham histórias inspiradoras com o mercado em Jaraguá do Sul",
-    image: "/static/favorito-media/thumbnails/10.jpg",
-    favicon: "/static/favorito-media/favicons/g1.png",
+      "Plataforma conhecida por ser o Ifood do presencial em Santa Catarina é a pedida para quem está “perdido no rolê” Há quem diga que quinta-feira é o início",
+    image: "/static/favorito-media/thumbnails/01.jpg",
+    favicon: "/static/favorito-media/favicons/agora-no-vale.png",
+  },
+  {
+    type: "online",
+    date: "13 Apr 2023",
+    outlet: "Engeplus",
+    title:
+      "Que Barbada celebrates one year as a startup and 1st Place in the Inova Criciuma Award",
+    href: "https://www.engeplus.com.br/noticia/economia/2023/187392-que-barbada-comemora-um-ano-de-startup-e-1-lugar-no-premio-inova-criciuma",
+    description:
+      "Com proposta de facilitar o happy hour, empreendedores comemoram um ano e muitas vitórias",
+    image: "/static/favorito-media/thumbnails/07.jpg",
+    favicon: "/static/favorito-media/favicons/engeplus.ico",
+  },
+  {
+    type: "online",
+    date: "07 Oct 2022",
+    outlet: "Noticenter",
+    title:
+      'Que Barbada app, created in Jaragua do Sul, arrives to "simplify going out"',
+    href: "https://www.noticenter.com.br/n.php?ID=31809&T=aplicativo-que-barbada-criado-em-jaragua-do-sul-chega-para-descomplicar-o-role",
+    description:
+      "Os empreendedores Cristian Macan e Gabriel Moresco, de Jaraguá do Sul, criaram o aplicativo Que Barbada.",
+    image: "/static/favorito-media/thumbnails/01.jpg",
+    favicon: "/static/favorito-media/favicons/noticenter.png",
+  },
+  {
+    type: "online",
+    date: "31 Mar 2023",
+    outlet: "OCP News",
+    title:
+      'Nascido aqui ou vindo de La, meu lugar e Jaragua - Cristian e Gabriel "Que Barbada"',
+    href: "https://ocp.news/colunista/joao-andrade/nascido-aqui-ou-vindo-de-la-meu-lugar-e-jaragua-cristian-e-gabriel-que-barbada",
+    description:
+      "Em abril de 2022, decidimos largar nossos empregos para criar uma solução inovadora: o aplicativo Que Barbada. Ele foi desenvolvido para conectar pessoas à bares, pubs, restaurantes e eventos da cidade, de uma maneira simples e rápida.",
+    image: "/static/favorito-media/thumbnails/05.jpg",
+    favicon: "/static/favorito-media/favicons/ocp-news.jpg",
+  },
+  {
+    type: "online",
+    date: "28 Nov 2023",
+    outlet: "Sul Noticias",
+    title: "Que Barbada is now Favorito",
+    href: "https://sulnoticias.com/que-barbada-agora-e-favorito/",
+    description:
+      "Aplicativo catarinense para busca de estabelecimentos de gastronomia e entretenimento readéqua sua marca após um ano de gestão e contabiliza mais de 60 mil usuários em nove cidades",
+    image: "/static/favorito-media/thumbnails/18.jpg",
+    favicon: "/static/favorito-media/favicons/sul-noticias.png",
+  },
+  {
+    type: "online",
+    date: "28 Nov 2023",
+    outlet: "4oito",
+    title: "Que Barbada is now Favorito",
+    href: "https://www.4oito.com.br/noticia/que-barbada-agora-e-favorito-72475",
+    description:
+      "Aplicativo catarinense para busca de estabelecimentos de gastronomia e entretenimento readéqua sua marca após um ano de gestão e contabiliza mais de 60 mil usuários em nove cidades",
+    image: "/static/favorito-media/thumbnails/18.jpg",
+    favicon: "/static/favorito-media/favicons/4oito.png",
+  },
+  {
+    type: "online",
+    date: "29 Nov 2023",
+    outlet: "Engeplus",
+    title: "Que Barbada is now Favorito",
+    href: "https://engeplus.com.br/noticia/geral/196921/que-barbada-agora-e-favorito",
+    description:
+      "Após um ano, aplicativo readéqua sua marca e já contabiliza mais de 60 mil usuários",
+    image: "/static/favorito-media/thumbnails/18.jpg",
+    favicon: "/static/favorito-media/favicons/engeplus.ico",
+  },
+  {
+    type: "online",
+    date: "02 Dec 2022",
+    outlet: "Diario Jaragua",
+    title:
+      "App created in Jaragua helps customers find the ideal bars and restaurants",
+    href: "https://www.diariodajaragua.com.br/geral/aplicativo-criado-em-jaragua-ajuda-clientes-a-encontrarem-bares-e/473264/",
+    description:
+      "O app Que Barbada, desenvolvido para ajudar na decisão do que fazer nos momentos de lazer, já está disponível na região de Jaraguá do Sul e Criciúma",
+    image: "/static/favorito-media/thumbnails/01.jpg",
+    favicon: "/static/favorito-media/favicons/diario-jaragua.png",
   },
   {
     type: "online",
@@ -207,75 +265,6 @@ export const favoritoMediaAppearances: FavoritoMediaAppearance[] = [
   },
   {
     type: "online",
-    date: "14 Nov 2023",
-    outlet: "Visse",
-    title:
-      "App that connects you to the best food and dining venues arrives in BC",
-    href: "https://www.visse.com.br/app-que-te-conecta-aos-melhores-estabelecimentos-de-gastronomia-chega-a-bc/",
-    description:
-      "Com uma centena de opções entre bares e restaurantes, Balneário Camboriú se tornou uma das cidades mais procuradas por turistas que viajam para Santa Catarina não só por suas belezas naturais, mas pelos atrativos gastronômicos. O turismo de gastronomia é um dos carros chefes da cidade, que conta com uma orla repleta de opções para ...",
-    image: "/static/favorito-media/thumbnails/14.jpg",
-    favicon: "/static/favorito-media/favicons/visse.png",
-  },
-  {
-    type: "online",
-    date: "14 Nov 2023",
-    outlet: "Viva Balneario",
-    title:
-      "App that connects you to the best restaurants arrives in Balneario Camboriu",
-    href: "https://www.vivabalneario.com.br/blog/app-que-conecta-aos-melhores-restaurantes-chega-em-balneario-camboriu/",
-    description:
-      "Com uma centena de opções entre bares e restaurantes, Balneário Camboriú se tornou uma das cidades mais procuradas por turistas que viajam para Santa Catarina não só por suas belezas naturais, mas pelos atrativos gastronômicos. O turismo de gastronomia é um dos carros chefes da cidade, que conta com uma orla repleta de opções ...",
-    image: "/static/favorito-media/thumbnails/14.jpg",
-    favicon: "/static/favorito-media/favicons/viva-balneario.ico",
-  },
-  {
-    type: "online",
-    date: "28 Nov 2023",
-    outlet: "Sul Noticias",
-    title: "Que Barbada is now Favorito",
-    href: "https://sulnoticias.com/que-barbada-agora-e-favorito/",
-    description:
-      "Aplicativo catarinense para busca de estabelecimentos de gastronomia e entretenimento readéqua sua marca após um ano de gestão e contabiliza mais de 60 mil usuários em nove cidades",
-    image: "/static/favorito-media/thumbnails/18.jpg",
-    favicon: "/static/favorito-media/favicons/sul-noticias.png",
-  },
-  {
-    type: "online",
-    date: "28 Nov 2023",
-    outlet: "4oito",
-    title: "Que Barbada is now Favorito",
-    href: "https://www.4oito.com.br/noticia/que-barbada-agora-e-favorito-72475",
-    description:
-      "Aplicativo catarinense para busca de estabelecimentos de gastronomia e entretenimento readéqua sua marca após um ano de gestão e contabiliza mais de 60 mil usuários em nove cidades",
-    image: "/static/favorito-media/thumbnails/18.jpg",
-    favicon: "/static/favorito-media/favicons/4oito.png",
-  },
-  {
-    type: "online",
-    date: "29 Nov 2023",
-    outlet: "Engeplus",
-    title: "Que Barbada is now Favorito",
-    href: "https://engeplus.com.br/noticia/geral/196921/que-barbada-agora-e-favorito",
-    description:
-      "Após um ano, aplicativo readéqua sua marca e já contabiliza mais de 60 mil usuários",
-    image: "/static/favorito-media/thumbnails/18.jpg",
-    favicon: "/static/favorito-media/favicons/engeplus.ico",
-  },
-  {
-    type: "online",
-    date: "07 Mar 2024",
-    outlet: "Satc",
-    title:
-      "Startup from Colearning Satc receives investment from a national accelerator",
-    href: "https://unisatc.com.br/favorito-startup-satc/",
-    description:
-      "Startup foi uma das contempladas pela Wow Aceleradora e recebeu o aporte de R$ 200 mil para ajudar no impulsionamento do negócio.",
-    image: "/static/favorito-media/thumbnails/20.jpg",
-    favicon: "/static/favorito-media/favicons/satc.png",
-  },
-  {
-    type: "online",
     date: "07 Mar 2024",
     outlet: "Engeplus",
     title:
@@ -309,5 +298,16 @@ export const favoritoMediaAppearances: FavoritoMediaAppearance[] = [
       "Uma plataforma catarinense de busca gastronômica, o app Favorito, recebe aporte de R$ 200 mil da aceleradora WOW para dar mais visibilidade a bares e restaurantes e ampliar sua atuação nacional até 2024.",
     image: "/static/favorito-media/thumbnails/20.jpg",
     favicon: "/static/favorito-media/favicons/rcn.png",
+  },
+  {
+    type: "online",
+    date: "11 Apr 2023",
+    outlet: "ND Mais",
+    title: "Inova Criciuma features ten innovative projects in its 3rd edition",
+    href: "https://ndmais.com.br/noticias/inova-criciuma-contempla-dez-projetos-inovadores-nesta-3a-edicao/",
+    description:
+      "A terceira edição do Inova Criciúma, iniciativa da prefeitura, contempla dez projetos inovadores com R$ 25 mil cada",
+    image: "/static/favorito-media/thumbnails/06.jpg",
+    favicon: "/static/favorito-media/favicons/nd-mais.png",
   },
 ]
