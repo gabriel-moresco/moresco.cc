@@ -1,4 +1,5 @@
-export type FavoritoMediaAppearance = {
+export type OnlineMediaAppearance = {
+  type: "online"
   date: string
   outlet: string
   title: string
@@ -8,8 +9,27 @@ export type FavoritoMediaAppearance = {
   favicon: string
 }
 
+export type NewspaperMediaAppearance = {
+  type: "newspaper"
+  date: string
+  outlet: string
+  title: string
+  favicon: string
+  images: Array<{
+    src: string
+    alt: string
+    width: number
+    height: number
+  }>
+}
+
+export type FavoritoMediaAppearance =
+  | OnlineMediaAppearance
+  | NewspaperMediaAppearance
+
 export const favoritoMediaAppearances: FavoritoMediaAppearance[] = [
   {
+    type: "online",
     date: "27 Sep 2022",
     outlet: "Engeplus",
     title:
@@ -21,6 +41,29 @@ export const favoritoMediaAppearances: FavoritoMediaAppearance[] = [
     favicon: "/static/favorito-media/favicons/engeplus.ico",
   },
   {
+    type: "newspaper",
+    date: "27 Sep 2022",
+    outlet: "Tribuna de Notícias",
+    title:
+      "App promises to make Happy Hour easier in Criciúma and the surrounding region",
+    favicon: "/static/favorito-media/favicons/tribuna-de-noticias.png",
+    images: [
+      {
+        src: "/static/favorito-media/newspaper/1.png",
+        alt: "Printed newspaper article about Favorito in Tribuna de noticias, page 1",
+        width: 720,
+        height: 900,
+      },
+      {
+        src: "/static/favorito-media/newspaper/2.png",
+        alt: "Printed newspaper article about Favorito in Tribuna de noticias, page 2",
+        width: 640,
+        height: 800,
+      },
+    ],
+  },
+  {
+    type: "online",
     date: "07 Oct 2022",
     outlet: "Noticenter",
     title:
@@ -32,6 +75,7 @@ export const favoritoMediaAppearances: FavoritoMediaAppearance[] = [
     favicon: "/static/favorito-media/favicons/noticenter.png",
   },
   {
+    type: "online",
     date: "02 Dec 2022",
     outlet: "Diario Jaragua",
     title:
@@ -43,6 +87,7 @@ export const favoritoMediaAppearances: FavoritoMediaAppearance[] = [
     favicon: "/static/favorito-media/favicons/diario-jaragua.png",
   },
   {
+    type: "online",
     date: "27 Feb 2023",
     outlet: "ND Mais",
     title:
@@ -54,6 +99,7 @@ export const favoritoMediaAppearances: FavoritoMediaAppearance[] = [
     favicon: "/static/favorito-media/favicons/nd-mais.png",
   },
   {
+    type: "online",
     date: "31 Mar 2023",
     outlet: "OCP News",
     title:
@@ -65,6 +111,7 @@ export const favoritoMediaAppearances: FavoritoMediaAppearance[] = [
     favicon: "/static/favorito-media/favicons/ocp-news.jpg",
   },
   {
+    type: "online",
     date: "11 Apr 2023",
     outlet: "ND Mais",
     title: "Inova Criciuma features ten innovative projects in its 3rd edition",
@@ -75,6 +122,7 @@ export const favoritoMediaAppearances: FavoritoMediaAppearance[] = [
     favicon: "/static/favorito-media/favicons/nd-mais.png",
   },
   {
+    type: "online",
     date: "13 Apr 2023",
     outlet: "Engeplus",
     title:
@@ -86,6 +134,7 @@ export const favoritoMediaAppearances: FavoritoMediaAppearance[] = [
     favicon: "/static/favorito-media/favicons/engeplus.ico",
   },
   {
+    type: "online",
     date: "19 Apr 2023",
     outlet: "Agora no Vale",
     title:
@@ -97,6 +146,7 @@ export const favoritoMediaAppearances: FavoritoMediaAppearance[] = [
     favicon: "/static/favorito-media/favicons/agora-no-vale.png",
   },
   {
+    type: "online",
     date: "13 Jun 2023",
     outlet: "ND Mais",
     title:
@@ -108,6 +158,7 @@ export const favoritoMediaAppearances: FavoritoMediaAppearance[] = [
     favicon: "/static/favorito-media/favicons/nd-mais.png",
   },
   {
+    type: "online",
     date: "20 Jun 2023",
     outlet: "G1",
     title:
@@ -119,6 +170,7 @@ export const favoritoMediaAppearances: FavoritoMediaAppearance[] = [
     favicon: "/static/favorito-media/favicons/g1.png",
   },
   {
+    type: "online",
     date: "16 Aug 2023",
     outlet: "SSC",
     title:
@@ -130,6 +182,7 @@ export const favoritoMediaAppearances: FavoritoMediaAppearance[] = [
     favicon: "/static/favorito-media/favicons/ssc.png",
   },
   {
+    type: "online",
     date: "22 Aug 2023",
     outlet: "Informe Blumenau",
     title:
@@ -141,6 +194,7 @@ export const favoritoMediaAppearances: FavoritoMediaAppearance[] = [
     favicon: "/static/favorito-media/favicons/informe-blumenau.png",
   },
   {
+    type: "online",
     date: "18 Sep 2023",
     outlet: "Jornal do Comercio",
     title:
@@ -152,6 +206,7 @@ export const favoritoMediaAppearances: FavoritoMediaAppearance[] = [
     favicon: "/static/favorito-media/favicons/jornal-do-comercio.png",
   },
   {
+    type: "online",
     date: "14 Nov 2023",
     outlet: "Visse",
     title:
@@ -163,6 +218,7 @@ export const favoritoMediaAppearances: FavoritoMediaAppearance[] = [
     favicon: "/static/favorito-media/favicons/visse.png",
   },
   {
+    type: "online",
     date: "14 Nov 2023",
     outlet: "Viva Balneario",
     title:
@@ -174,6 +230,7 @@ export const favoritoMediaAppearances: FavoritoMediaAppearance[] = [
     favicon: "/static/favorito-media/favicons/viva-balneario.ico",
   },
   {
+    type: "online",
     date: "28 Nov 2023",
     outlet: "Sul Noticias",
     title: "Que Barbada is now Favorito",
@@ -184,6 +241,7 @@ export const favoritoMediaAppearances: FavoritoMediaAppearance[] = [
     favicon: "/static/favorito-media/favicons/sul-noticias.png",
   },
   {
+    type: "online",
     date: "28 Nov 2023",
     outlet: "4oito",
     title: "Que Barbada is now Favorito",
@@ -194,6 +252,7 @@ export const favoritoMediaAppearances: FavoritoMediaAppearance[] = [
     favicon: "/static/favorito-media/favicons/4oito.png",
   },
   {
+    type: "online",
     date: "29 Nov 2023",
     outlet: "Engeplus",
     title: "Que Barbada is now Favorito",
@@ -204,6 +263,7 @@ export const favoritoMediaAppearances: FavoritoMediaAppearance[] = [
     favicon: "/static/favorito-media/favicons/engeplus.ico",
   },
   {
+    type: "online",
     date: "07 Mar 2024",
     outlet: "Satc",
     title:
@@ -215,6 +275,7 @@ export const favoritoMediaAppearances: FavoritoMediaAppearance[] = [
     favicon: "/static/favorito-media/favicons/satc.png",
   },
   {
+    type: "online",
     date: "07 Mar 2024",
     outlet: "Engeplus",
     title:
@@ -226,6 +287,7 @@ export const favoritoMediaAppearances: FavoritoMediaAppearance[] = [
     favicon: "/static/favorito-media/favicons/engeplus.ico",
   },
   {
+    type: "online",
     date: "11 Mar 2024",
     outlet: "Radio Ararangua",
     title:
@@ -237,6 +299,7 @@ export const favoritoMediaAppearances: FavoritoMediaAppearance[] = [
     favicon: "/static/favorito-media/favicons/radio-ararangua.png",
   },
   {
+    type: "online",
     date: "11 Mar 2024",
     outlet: "RCN",
     title:

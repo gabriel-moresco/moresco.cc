@@ -171,7 +171,7 @@ export const Favorito = ({ delay }: FavoritoProps) => (
         >
           {favoritoMediaAppearances.map((appearance) => (
             <MediaAppearanceCard
-              key={`${appearance.outlet}-${appearance.href}`}
+              key={`${appearance.outlet}-${appearance.date}-${appearance.title}`}
               appearance={appearance}
             />
           ))}

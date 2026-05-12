@@ -1,6 +1,7 @@
 "use client"
 
 import Image, { type ImageProps } from "next/image"
+import type { ReactNode } from "react"
 import {
   Dialog,
   DialogContent,
@@ -13,6 +14,7 @@ type ImageViewerProps = Omit<ImageProps, "className"> & {
   triggerClassName?: string
   imageClassName?: string
   bordered?: boolean
+  children?: ReactNode
 }
 
 export const ImageViewer = ({
@@ -20,6 +22,7 @@ export const ImageViewer = ({
   triggerClassName,
   imageClassName,
   bordered = true,
+  children,
   ...imageProps
 }: ImageViewerProps) => {
   const { width, height, ...restImageProps } = imageProps
@@ -46,6 +49,7 @@ export const ImageViewer = ({
             aria-hidden
             className="absolute inset-0 bg-background opacity-0 transition-opacity duration-200 group-hover:opacity-20"
           />
+          {children}
         </button>
       </DialogTrigger>
       <DialogContent
