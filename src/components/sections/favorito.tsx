@@ -6,6 +6,8 @@ import {
   GooglePlayLogoIcon,
 } from "@phosphor-icons/react/dist/ssr"
 import { ImageViewer } from "@/components/image-viewer"
+import { MediaAppearanceCard } from "@/components/media-appearance-card"
+import { favoritoMediaAppearances } from "@/data/favorito-media-appearances"
 
 type FavoritoProps = {
   delay: number
@@ -163,6 +165,17 @@ export const Favorito = ({ delay }: FavoritoProps) => (
           including articles in portals, newspapers, radio and TV interviews,
           among others. I list some below.
         </p>
+        <div
+          className="-mx-6 flex snap-x gap-3 overflow-x-auto px-6 py-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          aria-label="Favorito media appearances"
+        >
+          {favoritoMediaAppearances.map((appearance) => (
+            <MediaAppearanceCard
+              key={`${appearance.outlet}-${appearance.href}`}
+              appearance={appearance}
+            />
+          ))}
+        </div>
         <Link
           href="https://l.moresco.cc/favorito-pr"
           target="_blank"
