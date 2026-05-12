@@ -152,5 +152,31 @@ export const Favorito = ({ delay }: FavoritoProps) => (
         bordered={false}
       />
     </div>
+    <article className="flex flex-col gap-5">
+      <h3 className="text-sm font-medium tracking-tight text-foreground">
+        Featured in the Media
+      </h3>
+      <div className="flex flex-col gap-3 text-[13px] leading-relaxed text-muted-foreground">
+        <p>
+          We had more than{" "}
+          <span className="text-foreground">40 media appearances</span>,
+          including articles in portals, newspapers, radio and TV interviews,
+          among others. I list some below.
+        </p>
+        <Link
+          href="https://l.moresco.cc/favorito-pr"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group inline-flex w-fit items-center gap-1.5 font-medium text-foreground underline-offset-4 outline-none hover:underline focus-visible:ring-2 focus-visible:ring-ring/40"
+        >
+          See more media appearances
+          <ArrowUpRightIcon
+            aria-hidden
+            weight="light"
+            className="size-3.5 shrink-0 text-foreground"
+          />
+        </Link>
+      </div>
+    </article>
   </section>
 )
