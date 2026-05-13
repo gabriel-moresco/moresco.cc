@@ -1,6 +1,16 @@
 # moresco.cc
 
-This is the repository of my personal website [moresco.cc](https://moresco.cc)
+Personal website and portfolio for Gabriel Moresco, built as a minimal editorial-style one-pager with Next.js and Tailwind CSS.
+
+Check it out at https://moresco.cc
+
+## Stack
+
+- Next.js 16
+- React 19
+- Tailwind CSS v4
+- shadcn/ui
+- Phosphor Icons
 
 ## License
 
