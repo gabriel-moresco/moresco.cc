@@ -45,7 +45,7 @@ type IntroductionProps = {
 }
 
 export const Introduction = ({ delay }: IntroductionProps) => (
-  <section aria-labelledby="profile-heading" className="flex flex-col gap-7">
+  <section aria-labelledby="profile-heading" className="flex flex-col gap-4">
     <div
       className="relative size-[72px] animate-in overflow-hidden bg-muted duration-500 ease-out fill-mode-both fade-in"
       style={{ animationDelay: `${delay}ms` }}
@@ -82,7 +82,7 @@ export const Introduction = ({ delay }: IntroductionProps) => (
     </header>
 
     <div
-      className="flex animate-in flex-col gap-3 text-[13px] leading-relaxed text-muted-foreground duration-500 ease-out fill-mode-both fade-in slide-in-from-bottom-3"
+      className="mt-4 flex animate-in flex-col gap-3 text-[13px] leading-relaxed text-muted-foreground duration-500 ease-out fill-mode-both fade-in slide-in-from-bottom-3"
       style={{ animationDelay: `${delay + 240}ms` }}
     >
       <p>
