@@ -19,7 +19,7 @@ export const Favorito = ({ delay }: FavoritoProps) => (
     className="flex animate-in flex-col gap-12 duration-500 ease-out fill-mode-both fade-in slide-in-from-bottom-3"
     style={{ animationDelay: `${delay}ms` }}
   >
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-4">
       <Link
         href="https://favorito.digital"
         target="_blank"
@@ -74,7 +74,7 @@ export const Favorito = ({ delay }: FavoritoProps) => (
         You can <span className="text-foreground">download</span> and check out
         the app through the links below.
       </p>
-      <div className="grid grid-cols-1 items-start gap-5 sm:grid-cols-2">
+      <div className="grid grid-cols-1 items-start gap-4 sm:grid-cols-2">
         <div className="flex flex-col gap-2">
           <Link
             href="https://apps.apple.com/br/app/favorito-onde-comer-e-beber/id1598991618"
@@ -140,7 +140,7 @@ export const Favorito = ({ delay }: FavoritoProps) => (
         different numbers.
       </p>
     </div>
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-4">
       <p className="text-[13px] leading-relaxed text-muted-foreground">
         The day we reached <span className="text-foreground">Top 26</span> in
         the App Store Food &amp; Drink ranking.
@@ -154,12 +154,12 @@ export const Favorito = ({ delay }: FavoritoProps) => (
         bordered={false}
       />
     </div>
-    <article className="flex flex-col gap-5">
+    <article className="flex flex-col gap-4">
       <h3 className="text-sm font-medium tracking-tight text-foreground">
         Featured in the Media
       </h3>
-      <div className="flex flex-col gap-3 text-[13px] leading-relaxed text-muted-foreground">
-        <p>
+      <div className="flex flex-col gap-4">
+        <p className="text-[13px] leading-relaxed text-muted-foreground">
           We had more than{" "}
           <span className="text-foreground">40 media appearances</span>,
           including articles in portals, newspapers, radio and TV interviews,
@@ -190,7 +190,7 @@ export const Favorito = ({ delay }: FavoritoProps) => (
           href="https://l.moresco.cc/favorito-pr"
           target="_blank"
           rel="noopener noreferrer"
-          className="group inline-flex w-fit items-center gap-1.5 font-medium text-foreground underline-offset-4 outline-none hover:underline focus-visible:ring-2 focus-visible:ring-ring/40"
+          className="group inline-flex w-fit items-center gap-1.5 text-[13px] font-medium text-foreground underline-offset-4 outline-none hover:underline focus-visible:ring-2 focus-visible:ring-ring/40"
         >
           See more media appearances
           <ArrowUpRightIcon

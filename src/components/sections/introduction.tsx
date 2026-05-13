@@ -82,7 +82,7 @@ export const Introduction = ({ delay }: IntroductionProps) => (
     </header>
 
     <div
-      className="flex animate-in flex-col gap-3.5 text-[13px] leading-relaxed text-muted-foreground duration-500 ease-out fill-mode-both fade-in slide-in-from-bottom-3"
+      className="flex animate-in flex-col gap-3 text-[13px] leading-relaxed text-muted-foreground duration-500 ease-out fill-mode-both fade-in slide-in-from-bottom-3"
       style={{ animationDelay: `${delay + 240}ms` }}
     >
       <p>

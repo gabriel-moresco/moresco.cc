@@ -14,7 +14,7 @@ export const Weg = ({ delay }: WegProps) => (
     className="flex animate-in flex-col gap-12 duration-500 ease-out fill-mode-both fade-in slide-in-from-bottom-3"
     style={{ animationDelay: `${delay}ms` }}
   >
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-4">
       <Link
         href="https://weg.net"
         target="_blank"
@@ -55,7 +55,7 @@ export const Weg = ({ delay }: WegProps) => (
       </div>
     </div>
 
-    <article className="flex flex-col gap-5">
+    <article className="flex flex-col gap-4">
       <h3 className="text-sm font-medium tracking-tight text-foreground">
         Leopard
       </h3>
@@ -82,7 +82,7 @@ export const Weg = ({ delay }: WegProps) => (
       />
     </article>
 
-    <article className="flex flex-col gap-5">
+    <article className="flex flex-col gap-4">
       <h3 className="text-sm font-medium tracking-tight text-foreground">
         WAU SAP Connector
       </h3>
