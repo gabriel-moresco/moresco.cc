@@ -4,6 +4,8 @@ Personal website and portfolio for Gabriel Moresco, built as a minimal editorial
 
 Check it out at https://moresco.cc
 
+![moresco.cc preview](./public/og.png)
+
 ## Stack
 
 - Next.js 16
