@@ -9,9 +9,66 @@ import { Analytics } from "@vercel/analytics/next"
 
 const title = "Gabriel Moresco"
 const description = "I enjoy building things."
+const url = "https://moresco.cc"
+const profileImage = `${url}/static/gabriel.jpg`
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${url}/#website`,
+      url,
+      name: title,
+      alternateName: "moresco.cc",
+      inLanguage: "en",
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": `${url}/#profile`,
+      url,
+      name: title,
+      description,
+      isPartOf: {
+        "@id": `${url}/#website`,
+      },
+      inLanguage: "en",
+      mainEntity: {
+        "@id": `${url}/#person`,
+      },
+    },
+    {
+      "@type": "Person",
+      "@id": `${url}/#person`,
+      name: title,
+      alternateName: "gabriel-moresco",
+      jobTitle: "Product Engineer",
+      description:
+        "Product Engineer from Brazil with 8+ years of experience building web, mobile, and AI products.",
+      image: profileImage,
+      url,
+      email: "mailto:gabriel.moresco25@gmail.com",
+      sameAs: [
+        "https://github.com/gabriel-moresco",
+        "https://linkedin.com/in/gabriel-moresco",
+      ],
+      knowsAbout: [
+        "Product Engineering",
+        "Web Applications",
+        "Mobile Applications",
+        "AI Products",
+        "Startups",
+        "B2B2C Products",
+        "Next.js",
+      ],
+    },
+  ],
+}
+
+const jsonLd = JSON.stringify(structuredData).replace(/</g, "\\u003c")
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://moresco.cc"),
+  metadataBase: new URL(url),
   title,
   description,
   alternates: {
@@ -74,6 +131,12 @@ export default function RootLayout({
         fraunces.variable
       )}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLd }}
+        />
+      </head>
       <body>
         <ThemeProvider>
           <TooltipProvider delayDuration={150}>{children}</TooltipProvider>
