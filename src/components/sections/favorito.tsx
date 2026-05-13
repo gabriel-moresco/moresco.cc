@@ -165,16 +165,26 @@ export const Favorito = ({ delay }: FavoritoProps) => (
           including articles in portals, newspapers, radio and TV interviews,
           among others. I list some below.
         </p>
-        <div
-          className="-mx-6 flex snap-x gap-3 overflow-x-auto px-6 py-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-          aria-label="Favorito media appearances"
-        >
-          {favoritoMediaAppearances.map((appearance) => (
-            <MediaAppearanceCard
-              key={`${appearance.outlet}-${appearance.date}-${appearance.title}`}
-              appearance={appearance}
-            />
-          ))}
+        <div className="relative -mx-6">
+          <div
+            className="flex gap-3 overflow-x-auto px-6 py-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            aria-label="Favorito media appearances"
+          >
+            {favoritoMediaAppearances.map((appearance) => (
+              <MediaAppearanceCard
+                key={`${appearance.outlet}-${appearance.date}-${appearance.title}`}
+                appearance={appearance}
+              />
+            ))}
+          </div>
+          <span
+            aria-hidden
+            className="pointer-events-none absolute inset-y-0 right-0 w-6 bg-linear-to-l from-background to-transparent"
+          />
+          <span
+            aria-hidden
+            className="pointer-events-none absolute inset-y-0 left-0 w-6 bg-linear-to-r from-background to-transparent"
+          />
         </div>
         <Link
           href="https://l.moresco.cc/favorito-pr"

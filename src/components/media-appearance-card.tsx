@@ -30,7 +30,7 @@ const OnlineMediaAppearanceCard = ({
     href={appearance.href}
     target="_blank"
     rel="noopener noreferrer"
-    className="group flex h-[330px] w-[230px] shrink-0 snap-start flex-col overflow-hidden border border-border text-left transition-colors duration-200 outline-none hover:border-foreground/30 focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/40"
+    className="group flex h-[330px] w-[230px] shrink-0 flex-col overflow-hidden border border-border text-left transition-colors duration-200 outline-none hover:border-foreground/30 focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/40"
   >
     <div className="relative aspect-video overflow-hidden bg-muted">
       <Image
@@ -83,7 +83,7 @@ const NewspaperMediaAppearanceCard = ({
 }: {
   appearance: NewspaperMediaAppearance
 }) => (
-  <div className="flex h-[330px] w-[380px] shrink-0 snap-start flex-col overflow-hidden border border-border text-left">
+  <div className="flex h-[330px] w-[380px] shrink-0 flex-col overflow-hidden border border-border text-left">
     <div className="grid aspect-video grid-cols-2 gap-px bg-border">
       {appearance.images.map((image) => (
         <ImageViewer
