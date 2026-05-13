@@ -33,7 +33,7 @@ export const OpenSource = ({ delay }: OpenSourceProps) => (
     <div className="flex flex-col gap-4">
       <h2
         id="repos-heading"
-        className="text-sm font-medium tracking-tight text-foreground"
+        className="text-[15px] font-medium tracking-tight text-foreground"
       >
         Projects
       </h2>

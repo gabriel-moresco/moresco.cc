@@ -30,7 +30,7 @@ export const Weg = ({ delay }: WegProps) => (
         />
         <h2
           id="weg-heading"
-          className="text-sm font-medium tracking-tight text-foreground underline-offset-4 group-hover:underline"
+          className="text-[15px] font-medium tracking-tight text-foreground underline-offset-4 group-hover:underline"
         >
           WEG
         </h2>
