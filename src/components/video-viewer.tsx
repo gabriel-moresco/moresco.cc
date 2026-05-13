@@ -51,7 +51,7 @@ export const VideoViewer = ({
           aria-hidden
           className="absolute inset-0 flex items-center justify-center"
         >
-          <span className="inline-flex size-16 items-center justify-center bg-neutral-950">
+          <span className="inline-flex size-16 items-center justify-center bg-neutral-950/80">
             <PlayIcon
               weight="fill"
               className="size-6 translate-x-px text-white"
