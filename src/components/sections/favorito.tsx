@@ -21,7 +21,7 @@ export const Favorito = ({ delay }: FavoritoProps) => (
   >
     <div className="flex flex-col gap-4">
       <Link
-        href="https://favorito.digital"
+        href="https://www.instagram.com/favorito.digital"
         target="_blank"
         rel="noopener noreferrer"
         className="group inline-flex w-fit items-center gap-2.5 outline-none focus-visible:ring-2 focus-visible:ring-ring/40"
