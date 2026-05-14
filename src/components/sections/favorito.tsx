@@ -47,9 +47,10 @@ export const Favorito = ({ delay }: FavoritoProps) => (
       </Link>
       <div className="flex flex-col gap-3 text-[13px] leading-relaxed text-muted-foreground">
         <p>
-          I&apos;ve Co-founded Favorito, a B2B2C mobile app platform connecting
-          consumers with bars and restaurants through real-time venue discovery,
-          events, promotions, and location-based search. Backed by WOW Startups.
+          I&apos;ve co-founded Favorito (formerly Que Barbada), a B2B2C mobile
+          app platform connecting consumers with bars and restaurants through
+          real-time venue discovery, events, promotions, and location-based
+          search. Backed by WOW Startups.
         </p>
         <p>
           I grew the app to{" "}
@@ -60,6 +61,22 @@ export const Favorito = ({ delay }: FavoritoProps) => (
           including a <span className="text-foreground">Top 26</span> ranking on
           the App Store.
         </p>
+      </div>
+      <div className="grid grid-cols-1 gap-px sm:grid-cols-2">
+        <ImageViewer
+          src="/static/favorito-team-1.jpeg"
+          alt="Favorito team at an event"
+          width={810}
+          height={1080}
+          triggerClassName="aspect-3/4"
+        />
+        <ImageViewer
+          src="/static/favorito-team-2.jpeg"
+          alt="Favorito team presenting the app"
+          width={810}
+          height={1080}
+          triggerClassName="aspect-3/4"
+        />
       </div>
       <ImageViewer
         src="/static/favorito-app-preview.png"
