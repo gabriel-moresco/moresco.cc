@@ -1,5 +1,6 @@
 import { Divider } from "@/components/divider"
 import { Introduction } from "@/components/sections/introduction"
+import { Comp } from "@/components/sections/comp"
 import { Favorito } from "@/components/sections/favorito"
 import { Weg } from "@/components/sections/weg"
 import { ThemeToggleHint } from "@/components/theme-toggle-hint"
@@ -10,9 +11,11 @@ export default function Page() {
       <article className="flex w-full max-w-[520px] flex-col gap-16">
         <Introduction delay={60} />
         <Divider delay={510} />
-        <Favorito delay={540} />
+        <Comp delay={540} />
         <Divider delay={720} />
-        <Weg delay={750} />
+        <Favorito delay={750} />
+        <Divider delay={930} />
+        <Weg delay={960} />
       </article>
 
       <ThemeToggleHint />

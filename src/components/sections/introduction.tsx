@@ -91,9 +91,14 @@ export const Introduction = ({ delay }: IntroductionProps) => (
         mobile, and AI products.
       </p>
       <p>
-        Co-founded and led technology for early-stage startups, including{" "}
-        <span className="text-foreground">Favorito</span>, a B2B2C mobile app
-        that grew to 130k downloads, 27k MAU, and 700 paying business customers.
+        Currently building the future of AI for HR at{" "}
+        <span className="text-foreground">Comp</span>.
+      </p>
+      <p>
+        Previously co-founded and led technology for early-stage startups,
+        including <span className="text-foreground">Favorito</span>, a B2B2C
+        mobile app that grew to 130k downloads, 27k MAU, and 700 paying business
+        customers.
       </p>
     </div>
 
