@@ -72,7 +72,7 @@ export const Introduction = ({ delay }: IntroductionProps) => (
       </h1>
       <p className="flex items-baseline gap-1.5 text-xs text-muted-foreground">
         <span className="font-serif text-sm leading-none italic">
-          Product Engineer
+          Software Engineer
         </span>
         <span aria-hidden className="text-muted-foreground/60">
           ·
@@ -87,7 +87,7 @@ export const Introduction = ({ delay }: IntroductionProps) => (
     >
       <p>
         <span className="text-foreground">I&apos;m a builder-minded</span>{" "}
-        Product Engineer from Brazil, with 8+ years of experience building web,
+        Software Engineer from Brazil, with 8+ years of experience building web,
         mobile, and AI products.
       </p>
       <p>

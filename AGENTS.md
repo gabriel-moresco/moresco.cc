@@ -10,7 +10,7 @@ This project is my personal website [moresco.cc](https://moresco.cc) - a minimal
 ### Typography
 
 - Base: JetBrains Mono (monospace everywhere)
-- Accent: Fraunces italic at text-sm on "Product Engineer"
+- Accent: Fraunces italic at text-sm on "Software Engineer"
 
 ### Icons
 

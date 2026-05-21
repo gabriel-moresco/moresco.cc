@@ -42,9 +42,9 @@ const structuredData = {
       "@id": `${url}/#person`,
       name: title,
       alternateName: "gabriel-moresco",
-      jobTitle: "Product Engineer",
+      jobTitle: "Software Engineer",
       description:
-        "Product Engineer from Brazil with 8+ years of experience building web, mobile, and AI products.",
+        "Software Engineer from Brazil with 8+ years of experience building web, mobile, and AI products.",
       image: profileImage,
       url,
       email: "mailto:gabriel.moresco25@gmail.com",
@@ -53,6 +53,7 @@ const structuredData = {
         "https://linkedin.com/in/gabriel-moresco",
       ],
       knowsAbout: [
+        "Software Engineering",
         "Product Engineering",
         "Web Applications",
         "Mobile Applications",
